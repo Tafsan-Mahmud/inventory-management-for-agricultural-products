@@ -1,0 +1,143 @@
+/* ====== Modern Agro — custom styles ====== */
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* Navbar link underline effect */
+.nav-link {
+  position: relative;
+  color: #294b23;
+  transition: color .2s;
+}
+.nav-link:hover { color: #3b7730; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #3b7730;
+  transition: all .3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: #3b7730; }
+
+/* Scrolled navbar */
+#navbar.scrolled {
+  background: rgba(251, 248, 239, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* Floating animations */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes floaty-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.floaty       { animation: floaty 5s ease-in-out infinite; }
+.floaty-slow  { animation: floaty-slow 7s ease-in-out infinite; }
+
+/* Pop in */
+@keyframes pop {
+  0%   { transform: scale(.92); opacity: 0; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* Fade slide */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .5s ease both; }
+
+/* ===== Dashboard sidebar links ===== */
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #294b23;
+  transition: all .2s;
+  cursor: pointer;
+}
+.side-link:hover {
+  background: #f3f9f1;
+  color: #305e28;
+}
+.side-link.active {
+  background: linear-gradient(135deg, #3b7730, #305e28);
+  color: #fff;
+  box-shadow: 0 8px 20px -8px rgba(59,119,48,.5);
+}
+.side-link.active i { color: #fff; }
+
+/* Stat card stagger */
+.stat-card { animation: fadeUp .5s ease both; }
+.stat-card:nth-child(1){ animation-delay: .05s; }
+.stat-card:nth-child(2){ animation-delay: .1s;  }
+.stat-card:nth-child(3){ animation-delay: .15s; }
+.stat-card:nth-child(4){ animation-delay: .2s;  }
+
+/* Toggle switch */
+.toggle {
+  appearance: none;
+  width: 40px;
+  height: 22px;
+  background: #d6e4d1;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background .2s;
+}
+.toggle:checked { background: #3b7730; }
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  top: 2px; left: 2px;
+  transition: transform .2s;
+}
+.toggle:checked::before { transform: translateX(18px); }
+
+/* Table row hover */
+#invBody tr {
+  border-top: 1px solid #e3f1df;
+  transition: background .15s;
+}
+#invBody tr:hover { background: #f9fdf7; }
+
+/* Row stagger on insert */
+.row-in { animation: fadeUp .35s ease both; }
+
+/* Toast show */
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f3f9f1; }
+::-webkit-scrollbar-thumb { background: #c6e3bd; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #9dcd8f; }
+
+/* Page transition */
+.page { animation: fadeUp .4s ease both; }
+
+/* Responsive table mobile tweak */
+@media (max-width: 640px) {
+  #invBody td, #invBody th { padding: 10px 12px; font-size: 13px; }
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Modern Agro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['"Plus Jakarta Sans"','sans-serif'], serif: ['"DM Serif Display"','serif'] },
+      colors: { agro:{50:'#f3f9f1',100:'#e3f1df',200:'#c6e3bd',300:'#9dcd8f',400:'#70b05d',500:'#4e9340',600:'#3b7730',700:'#305e28',800:'#294b23',900:'#233f1f'}, cream:'#FBF8EF', earth:'#8B5E34' }
+    }}}
+  </script>
+</head>
+<body class="font-sans bg-cream text-agro-900">
+
+  <div class="flex min-h-screen">
+
+    <!-- ========= SIDEBAR ========= -->
+    <aside id="sidebar" class="fixed lg:sticky top-0 h-screen w-72 bg-white border-r border-agro-100 flex-shrink-0 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-300">
+      <div class="p-6 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-agro-600 grid place-items-center shadow-lg shadow-agro-600/30"><i class="fa-solid fa-seedling text-white"></i></div>
+          <span class="text-lg font-bold">Modern<span class="text-agro-600">Agro</span></span>
+        </a>
+        <button id="closeSidebar" class="lg:hidden w-8 h-8 grid place-items-center rounded-lg hover:bg-agro-50"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <nav class="px-4 mt-2 space-y-1">
+        <a href="#" class="side-link active" data-page="overview">
+          <i class="fa-solid fa-chart-pie w-5"></i> <span>Overview</span>
+        </a>
+        <a href="#" class="side-link" data-page="inventory">
+          <i class="fa-solid fa-boxes-stacked w-5"></i> <span>Inventory</span>
+          <span id="invBadge" class="ml-auto bg-agro-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+        </a>
+        <a href="#" class="side-link" data-page="categories">
+          <i class="fa-solid fa-layer-group w-5"></i> <span>Categories</span>
+        </a>
+        <a href="#" class="side-link" data-page="reports">
+          <i class="fa-solid fa-file-lines w-5"></i> <span>Reports</span>
+        </a>
+        <a href="#" class="side-link" data-page="settings">
+          <i class="fa-solid fa-gear w-5"></i> <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="absolute bottom-6 left-4 right-4 bg-gradient-to-br from-agro-600 to-agro-800 rounded-2xl p-5 text-white overflow-hidden relative">
+        <div class="absolute -right-6 -top-6 w-24 h-24 bg-white/10 rounded-full"></div>
+        <i class="fa-solid fa-crown text-amber-300"></i>
+        <h4 class="font-bold mt-2">Go Pro</h4>
+        <p class="text-xs text-white/80 mt-1">Unlock advanced analytics and multi-farm support.</p>
+        <button class="mt-3 bg-white text-agro-800 text-xs font-semibold px-3 py-1.5 rounded-full hover:-translate-y-0.5 transition">Upgrade</button>
+      </div>
+    </aside>
+
+    <!-- backdrop -->
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black/40 z-30 hidden lg:hidden"></div>
+
+    <!-- ========= MAIN ========= -->
+    <main class="flex-1 min-w-0">
+
+      <!-- top bar -->
+      <header class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-agro-100 z-20">
+        <div class="flex items-center gap-4 px-5 lg:px-8 py-4">
+          <button id="openSidebar" class="lg:hidden w-10 h-10 grid place-items-center rounded-lg bg-agro-50"><i class="fa-solid fa-bars text-agro-700"></i></button>
+
+          <div class="flex-1 max-w-md relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-agro-800/40"></i>
+            <input id="globalSearch" type="text" placeholder="Search products, categories..." class="w-full pl-11 pr-4 py-2.5 rounded-full bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none transition text-sm"/>
+          </div>
+
+          <button class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-agro-50 hover:bg-agro-100 relative">
+            <i class="fa-regular fa-bell text-agro-700"></i>
+            <span class="absolute top-2 right-2 w-2 h-2 bg-amber-500 rounded-full"></span>
+          </button>
+
+          <div class="flex items-center gap-3">
+            <img src="assets/avatar.jpg" alt="User" class="w-10 h-10 rounded-full object-cover border-2 border-agro-200"/>
+            <div class="hidden md:block">
+              <div class="text-sm font-semibold leading-tight">Arif Rahman</div>
+              <div class="text-xs text-agro-800/60">Farm Manager</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== PAGE: OVERVIEW ===== -->
+      <section id="page-overview" class="page p-5 lg:p-8">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
+          <div>
+            <h1 class="font-serif text-4xl">Good morning, Arif 👋</h1>
+            <p class="text-agro-800/60 mt-1 text-sm">Here's what's happening at your farm today.</p>
+          </div>
+          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-plus mr-1"></i> Add Product
+          </button>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="w-11 h-11 rounded-xl bg-agro-100 text-agro-700 grid place-items-center"><i class="fa-solid fa-boxes-stacked"></i></div>
+              <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+12%</span>
+            </div>
+            <div class="mt-4 text-3xl font-bold" id="statTotal">0</div>
+            <div class="text-sm text-agro-800/60 mt-1">Total Products</div>
+          </div>
+
+          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 grid place-items-center"><i class="fa-solid fa-warehouse"></i></div>
+              <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+5%</span>
+            </div>
+            <div class="mt-4 text-3xl font-bold" id="statStock">0</div>
+            <div class="text-sm text-agro-800/60 mt-1">Total Stock (kg)</div>
+          </div>
+
+          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="w-11 h-11 rounded-xl bg-red-100 text-red-700 grid place-items-center"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <span class="text-xs text-red-600 bg-red-50 px-2 py-0.5 rounded-full font-semibold">Alert</span>
+            </div>
+            <div class="mt-4 text-3xl font-bold" id="statLow">0</div>
+            <div class="text-sm text-agro-800/60 mt-1">Low Stock Items</div>
+          </div>
+
+          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-700 grid place-items-center"><i class="fa-solid fa-dollar-sign"></i></div>
+              <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+18%</span>
+            </div>
+            <div class="mt-4 text-3xl font-bold">$<span id="statValue">0</span></div>
+            <div class="text-sm text-agro-800/60 mt-1">Inventory Value</div>
+          </div>
+        </div>
+
+        <!-- Chart + sidecard -->
+        <div class="grid lg:grid-cols-3 gap-5 mt-6">
+          <div class="lg:col-span-2 bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <h3 class="font-bold text-lg">Monthly Yield Overview</h3>
+                <p class="text-xs text-agro-800/60 mt-0.5">Harvest output across categories</p>
+              </div>
+              <div class="flex gap-2 text-xs">
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-agro-600"></span>Grains</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-amber-500"></span>Vegetables</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-earth"></span>Fruits</span>
+              </div>
+            </div>
+            <div class="mt-6 h-72">
+              <canvas id="yieldChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-agro-700 to-agro-900 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
+            <i class="fa-solid fa-sun text-amber-300 text-2xl"></i>
+            <h3 class="font-bold text-lg mt-3">Weather Today</h3>
+            <p class="text-white/80 text-sm mt-1">Dhaka, Bangladesh</p>
+            <div class="mt-6 text-5xl font-bold">28°C</div>
+            <p class="text-sm text-white/80 mt-1">Sunny · Ideal for harvesting</p>
+            <div class="grid grid-cols-3 gap-3 mt-6 text-center text-xs">
+              <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-droplet text-blue-300"></i><div class="mt-1">65%</div></div>
+              <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-wind text-white/80"></i><div class="mt-1">12km/h</div></div>
+              <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-eye text-white/80"></i><div class="mt-1">10km</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent -->
+        <div class="bg-white rounded-2xl border border-agro-100 p-6 mt-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg">Recent Activity</h3>
+            <a href="#" class="text-agro-600 text-sm font-semibold" data-nav="inventory">View all →</a>
+          </div>
+          <div id="recentList" class="space-y-3"></div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE: INVENTORY ===== -->
+      <section id="page-inventory" class="page hidden p-5 lg:p-8">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <h1 class="font-serif text-4xl">Inventory</h1>
+            <p class="text-agro-800/60 mt-1 text-sm">Manage all your agricultural products in one place.</p>
+          </div>
+          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-plus mr-1"></i> Add Product
+          </button>
+        </div>
+
+        <!-- filters -->
+        <div class="bg-white rounded-2xl border border-agro-100 p-4 mb-5 flex flex-wrap gap-3 items-center shadow-sm">
+          <div class="flex-1 min-w-[200px] relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-agro-800/40"></i>
+            <input id="invSearch" type="text" placeholder="Search products..." class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none text-sm"/>
+          </div>
+          <select id="invCategory" class="px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-sm">
+            <option value="">All Categories</option>
+            <option>Grains</option>
+            <option>Vegetables</option>
+            <option>Fruits</option>
+            <option>Dairy</option>
+            <option>Seeds</option>
+            <option>Livestock Feed</option>
+          </select>
+          <select id="invSort" class="px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-sm">
+            <option value="name">Sort: Name</option>
+            <option value="stock">Sort: Stock</option>
+            <option value="price">Sort: Price</option>
+          </select>
+        </div>
+
+        <!-- table -->
+        <div class="bg-white rounded-2xl border border-agro-100 overflow-hidden shadow-sm">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-agro-50 text-agro-700">
+                <tr>
+                  <th class="text-left px-5 py-3 font-semibold">Product</th>
+                  <th class="text-left px-5 py-3 font-semibold">Category</th>
+                  <th class="text-left px-5 py-3 font-semibold">Stock</th>
+                  <th class="text-left px-5 py-3 font-semibold">Price</th>
+                  <th class="text-left px-5 py-3 font-semibold">Status</th>
+                  <th class="text-right px-5 py-3 font-semibold">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="invBody"></tbody>
+            </table>
+          </div>
+          <div id="invEmpty" class="hidden text-center py-16">
+            <i class="fa-solid fa-box-open text-5xl text-agro-200"></i>
+            <p class="mt-4 text-agro-800/60">No products found. Try adding one!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE: CATEGORIES ===== -->
+      <section id="page-categories" class="page hidden p-5 lg:p-8">
+        <h1 class="font-serif text-4xl">Categories</h1>
+        <p class="text-agro-800/60 mt-1 text-sm">Product distribution across categories.</p>
+
+        <div id="catGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6"></div>
+      </section>
+
+      <!-- ===== PAGE: REPORTS ===== -->
+      <section id="page-reports" class="page hidden p-5 lg:p-8">
+        <h1 class="font-serif text-4xl">Reports</h1>
+        <p class="text-agro-800/60 mt-1 text-sm">Insights and summaries of your inventory.</p>
+
+        <div class="grid lg:grid-cols-2 gap-5 mt-6">
+          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <h3 class="font-bold text-lg">Stock Distribution</h3>
+            <p class="text-xs text-agro-800/60 mt-0.5">By category</p>
+            <div class="mt-5 h-72"><canvas id="distChart"></canvas></div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <h3 class="font-bold text-lg">Top 5 Products by Value</h3>
+            <div id="topList" class="mt-4 space-y-3"></div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm mt-5">
+          <h3 class="font-bold text-lg">Summary</h3>
+          <div id="summaryGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4"></div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE: SETTINGS ===== -->
+      <section id="page-settings" class="page hidden p-5 lg:p-8">
+        <h1 class="font-serif text-4xl">Settings</h1>
+        <p class="text-agro-800/60 mt-1 text-sm">Manage your farm profile and preferences.</p>
+
+        <div class="grid lg:grid-cols-3 gap-5 mt-6">
+          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <h3 class="font-bold">Profile</h3>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="assets/avatar.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-agro-200"/>
+              <div>
+                <div class="font-semibold">Arif Rahman</div>
+                <div class="text-xs text-agro-800/60">arif@modernagro.com</div>
+              </div>
+            </div>
+            <div class="space-y-3 mt-5 text-sm">
+              <div><label class="text-xs text-agro-800/60">Farm Name</label><input class="w-full mt-1 px-3 py-2 rounded-lg bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 outline-none" value="Green Valley Farm"/></div>
+              <div><label class="text-xs text-agro-800/60">Location</label><input class="w-full mt-1 px-3 py-2 rounded-lg bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 outline-none" value="Dhaka, Bangladesh"/></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <h3 class="font-bold">Preferences</h3>
+            <div class="mt-4 space-y-4 text-sm">
+              <label class="flex items-center justify-between"><span>Email Alerts</span><input type="checkbox" checked class="toggle"/></label>
+              <label class="flex items-center justify-between"><span>Low Stock Notifications</span><input type="checkbox" checked class="toggle"/></label>
+              <label class="flex items-center justify-between"><span>Weekly Reports</span><input type="checkbox" class="toggle"/></label>
+              <label class="flex items-center justify-between"><span>Dark Mode</span><input type="checkbox" class="toggle"/></label>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+            <h3 class="font-bold">Data</h3>
+            <p class="text-xs text-agro-800/60 mt-1">Your inventory is stored locally in your browser.</p>
+            <button id="resetData" class="mt-5 w-full bg-red-50 hover:bg-red-100 text-red-700 py-2.5 rounded-xl text-sm font-semibold transition"><i class="fa-solid fa-trash mr-1"></i> Reset All Data</button>
+            <button id="seedData" class="mt-2 w-full bg-agro-50 hover:bg-agro-100 text-agro-700 py-2.5 rounded-xl text-sm font-semibold transition"><i class="fa-solid fa-seedling mr-1"></i> Load Sample Data</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ====== MODAL ====== -->
+  <div id="productModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl animate-[pop_.3s_ease]">
+      <div class="flex items-center justify-between">
+        <h3 id="modalTitle" class="font-serif text-2xl">Add Product</h3>
+        <button id="closeModal" class="w-9 h-9 grid place-items-center rounded-full hover:bg-agro-50"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="productForm" class="mt-6 space-y-4">
+        <input type="hidden" id="pid"/>
+        <div>
+          <label class="text-sm font-medium">Product Name</label>
+          <input required id="pname" type="text" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none"/>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-sm font-medium">Category</label>
+            <select required id="pcategory" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none">
+              <option>Grains</option><option>Vegetables</option><option>Fruits</option>
+              <option>Dairy</option><option>Seeds</option><option>Livestock Feed</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm font-medium">Unit</label>
+            <select id="punit" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none">
+              <option>kg</option><option>lb</option><option>ton</option><option>box</option><option>piece</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-sm font-medium">Stock</label>
+            <input required id="pstock" type="number" min="0" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none"/>
+          </div>
+          <div>
+            <label class="text-sm font-medium">Price ($)</label>
+            <input required id="pprice" type="number" min="0" step="0.01" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Supplier</label>
+          <input id="psupplier" type="text" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none" placeholder="Optional"/>
+        </div>
+        <button type="submit" class="w-full bg-agro-600 hover:bg-agro-700 text-white py-3 rounded-xl font-semibold shadow-lg shadow-agro-600/25 transition hover:-translate-y-0.5">Save Product</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-agro-800 text-white px-5 py-3 rounded-xl shadow-xl translate-y-20 opacity-0 transition-all z-50 text-sm"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

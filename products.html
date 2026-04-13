@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Modern Agro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['"Plus Jakarta Sans"','sans-serif'], serif: ['"DM Serif Display"','serif'] },
+      colors: { agro:{50:'#f3f9f1',100:'#e3f1df',200:'#c6e3bd',300:'#9dcd8f',400:'#70b05d',500:'#4e9340',600:'#3b7730',700:'#305e28',800:'#294b23',900:'#233f1f'}, cream:'#FBF8EF', earth:'#8B5E34' }
+    }}}
+  </script>
+</head>
+<body class="font-sans bg-cream text-agro-900">
+
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-5 lg:px-8">
+      <nav class="flex items-center justify-between py-4">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-agro-600 grid place-items-center shadow-lg shadow-agro-600/30"><i class="fa-solid fa-seedling text-white text-lg"></i></div>
+          <span class="text-xl font-bold">Modern<span class="text-agro-600">Agro</span></span>
+        </a>
+        <ul class="hidden lg:flex items-center gap-9 text-sm font-medium">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-3">
+          <a href="dashboard.html" class="hidden sm:inline-flex items-center gap-2 bg-agro-600 hover:bg-agro-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5"><i class="fa-solid fa-grip text-xs"></i> Dashboard</a>
+          <button id="mobileBtn" class="lg:hidden w-10 h-10 grid place-items-center rounded-lg bg-white border border-agro-100"><i class="fa-solid fa-bars text-agro-700"></i></button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="hidden lg:hidden pb-4">
+        <ul class="flex flex-col gap-1 bg-white rounded-2xl p-3 shadow-lg border border-agro-100">
+          <li><a href="index.html" class="block px-4 py-2.5 rounded-lg hover:bg-agro-50 font-medium">Home</a></li>
+          <li><a href="about.html" class="block px-4 py-2.5 rounded-lg hover:bg-agro-50 font-medium">About</a></li>
+          <li><a href="products.html" class="block px-4 py-2.5 rounded-lg bg-agro-50 font-medium">Products</a></li>
+          <li><a href="contact.html" class="block px-4 py-2.5 rounded-lg hover:bg-agro-50 font-medium">Contact</a></li>
+          <li><a href="dashboard.html" class="block px-4 py-2.5 rounded-lg bg-agro-600 text-white font-semibold text-center">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-36 pb-12 bg-white">
+    <div class="container mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+      <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Our Products</span>
+      <h1 class="font-serif text-5xl md:text-6xl mt-2">Fresh from our <span class="text-agro-600">fields</span></h1>
+      <p class="max-w-2xl mx-auto mt-5 text-agro-800/70">Explore the categories Modern Agro helps thousands of farms manage every single day.</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-56 overflow-hidden"><img src="assets/product-grains.jpg" alt="Grains" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Grains & Cereals</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Rice, wheat, corn, barley and more staple crops tracked by batch.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">120+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-56 overflow-hidden"><img src="assets/product-vegetables.jpg" alt="Vegetables" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Vegetables</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Leafy greens, roots, and gourds — managed for freshness and rotation.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">85+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+        <div class="h-56 overflow-hidden"><img src="assets/product-fruits.jpg" alt="Fruits" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Fruits</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Seasonal harvests organized by shelf-life, grade, and destination.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">60+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-56 overflow-hidden"><img src="assets/product-dairy.jpg" alt="Dairy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Dairy</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Milk, cheese, and yogurt inventory with expiry alerts built-in.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">30+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-56 overflow-hidden"><img src="assets/product-seeds.jpg" alt="Seeds" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Seeds & Seedlings</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Track germination rates, planting dates, and inventory on hand.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">200+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+        <div class="h-56 overflow-hidden"><img src="assets/product-livestock.jpg" alt="Livestock Feed" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
+          <h3 class="font-serif text-2xl mt-3">Livestock Feed</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Hay, silage, and concentrates — never run low on feed again.</p>
+          <div class="flex items-center justify-between mt-5">
+            <span class="text-sm font-semibold text-agro-700">45+ varieties</span>
+            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-agro-900 text-white/80 pt-16 pb-8 mt-10">
+    <div class="container mx-auto px-5 lg:px-8 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-agro-500 grid place-items-center"><i class="fa-solid fa-seedling text-white"></i></div>
+          <span class="text-xl font-bold text-white">Modern<span class="text-agro-300">Agro</span></span>
+        </div>
+        <p class="mt-4 max-w-sm text-sm">Smart inventory management crafted for the modern farmer.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-agro-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-agro-300">About</a></li>
+          <li><a href="products.html" class="hover:text-agro-300">Products</a></li>
+          <li><a href="contact.html" class="hover:text-agro-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm">
+          <li><i class="fa-solid fa-location-dot mr-2 text-agro-300"></i>123 Green Valley, Dhaka</li>
+          <li><i class="fa-solid fa-envelope mr-2 text-agro-300"></i>hello@modernagro.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto px-5 lg:px-8 mt-10 pt-6 border-t border-white/10 text-center text-sm text-white/50">© 2026 Modern Agro. All rights reserved.</div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
