@@ -48,53 +48,81 @@
     </div>
   </header>
 
-  <section class="pt-36 pb-12 bg-white">
-    <div class="container mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+  <!-- Hero -->
+  <section class="pt-32 pb-12 lg:pt-40 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-agro-200/30 rounded-full blur-3xl -z-0"></div>
+    <div class="container mx-auto px-5 lg:px-8 text-center relative">
       <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
-      <h1 class="font-serif text-5xl md:text-6xl mt-2">Let's <span class="text-agro-600">talk</span></h1>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl mt-2 leading-tight">Let's <span class="text-agro-600">talk</span></h1>
       <p class="max-w-xl mx-auto mt-5 text-agro-800/70">Questions, partnerships, or just want to say hello? We'd love to hear from you.</p>
     </div>
   </section>
 
-  <section class="py-16">
+  <!-- Quick contact cards -->
+  <section class="py-12">
+    <div class="container mx-auto px-5 lg:px-8 grid sm:grid-cols-3 gap-5">
+      <div class="bg-white p-6 rounded-2xl border border-agro-100 text-center hover:-translate-y-1 transition shadow-sm" data-aos="fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-agro-100 text-agro-700 grid place-items-center text-2xl mx-auto"><i class="fa-solid fa-headset"></i></div>
+        <h4 class="font-bold mt-4">Live Support</h4>
+        <p class="text-sm text-agro-800/60 mt-1">9 AM — 6 PM, Mon–Fri</p>
+        <a href="#form" class="text-agro-600 text-sm font-semibold mt-2 inline-block">Chat with us →</a>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-agro-100 text-center hover:-translate-y-1 transition shadow-sm" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 grid place-items-center text-2xl mx-auto"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <h4 class="font-bold mt-4">Email Support</h4>
+        <p class="text-sm text-agro-800/60 mt-1">Reply within 24 hours</p>
+        <a href="mailto:hello@modernagro.com" class="text-agro-600 text-sm font-semibold mt-2 inline-block">Send email →</a>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-agro-100 text-center hover:-translate-y-1 transition shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 grid place-items-center text-2xl mx-auto"><i class="fa-solid fa-comments"></i></div>
+        <h4 class="font-bold mt-4">Community</h4>
+        <p class="text-sm text-agro-800/60 mt-1">Join 12k+ farmers</p>
+        <a href="#" class="text-agro-600 text-sm font-semibold mt-2 inline-block">Join forum →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form + Info -->
+  <section id="form" class="py-12">
     <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-10">
-      <div data-aos="fade-right" class="space-y-5">
+
+      <div data-aos="fade-up" class="space-y-5">
         <div class="flex gap-4 items-start p-6 bg-white rounded-2xl border border-agro-100 hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
           <div>
             <h4 class="font-bold">Our Office</h4>
             <p class="text-sm text-agro-800/70 mt-1">123 Green Valley Road, Gulshan<br/>Dhaka 1212, Bangladesh</p>
           </div>
         </div>
         <div class="flex gap-4 items-start p-6 bg-white rounded-2xl border border-agro-100 hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl"><i class="fa-solid fa-phone"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl flex-shrink-0"><i class="fa-solid fa-phone"></i></div>
           <div>
             <h4 class="font-bold">Phone</h4>
-            <p class="text-sm text-agro-800/70 mt-1">+880 1234-567890<br/>Mon — Fri, 9am — 6pm</p>
+            <p class="text-sm text-agro-800/70 mt-1">+880 1987-556069<br/>Mon — Fri, 9am — 6pm</p>
           </div>
         </div>
         <div class="flex gap-4 items-start p-6 bg-white rounded-2xl border border-agro-100 hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-agro-100 text-agro-700 grid place-items-center text-xl flex-shrink-0"><i class="fa-solid fa-envelope"></i></div>
           <div>
             <h4 class="font-bold">Email</h4>
             <p class="text-sm text-agro-800/70 mt-1">hello@modernagro.com<br/>support@modernagro.com</p>
           </div>
         </div>
-        <img src="assets/contact-field.jpg" alt="Green agricultural landscape" class="rounded-2xl w-full h-56 object-cover"/>
+        <img src="assets/contact-field.svg" alt="Green agricultural landscape" class="rounded-2xl w-full h-56 object-cover"/>
       </div>
 
-      <div data-aos="fade-left" class="bg-white p-8 md:p-10 rounded-3xl border border-agro-100 shadow-xl">
-        <h3 class="font-serif text-3xl">Send us a message</h3>
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-agro-100 shadow-xl">
+        <h3 class="font-serif text-2xl sm:text-3xl">Send us a message</h3>
         <p class="text-sm text-agro-800/70 mt-2">We'll get back within 24 hours.</p>
         <form id="contactForm" class="mt-6 space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label class="text-sm font-medium">First name</label>
-              <input required type="text" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition" placeholder="Arif"/>
+              <input required type="text" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition" placeholder="Ratul Ahmed"/>
             </div>
             <div>
               <label class="text-sm font-medium">Last name</label>
-              <input required type="text" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition" placeholder="Rahman"/>
+              <input required type="text" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition" placeholder="Saikat"/>
             </div>
           </div>
           <div>
@@ -107,7 +135,7 @@
           </div>
           <div>
             <label class="text-sm font-medium">Message</label>
-            <textarea required rows="5" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition" placeholder="Tell us about your farm..."></textarea>
+            <textarea required rows="5" class="mt-1 w-full px-4 py-3 rounded-xl border border-agro-200 focus:border-agro-500 focus:ring-2 focus:ring-agro-200 outline-none transition resize-none" placeholder="Tell us about your farm..."></textarea>
           </div>
           <button type="submit" class="w-full bg-agro-600 hover:bg-agro-700 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-agro-600/25 transition hover:-translate-y-0.5">
             Send Message <i class="fa-solid fa-paper-plane ml-1"></i>
@@ -117,6 +145,47 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-5 lg:px-8 max-w-3xl">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Common Questions</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl mt-2">FAQ</h2>
+      </div>
+      <div class="space-y-3">
+        <details class="group bg-cream rounded-2xl border border-agro-100 p-5 cursor-pointer">
+          <summary class="font-semibold flex items-center justify-between list-none">
+            <span>Is Modern Agro free to use?</span>
+            <i class="fa-solid fa-plus group-open:rotate-45 transition text-agro-600"></i>
+          </summary>
+          <p class="text-sm text-agro-800/70 mt-3">Yes, the dashboard is completely free for individual farmers. Pro plans unlock multi-farm and team features.</p>
+        </details>
+        <details class="group bg-cream rounded-2xl border border-agro-100 p-5 cursor-pointer">
+          <summary class="font-semibold flex items-center justify-between list-none">
+            <span>Where is my data stored?</span>
+            <i class="fa-solid fa-plus group-open:rotate-45 transition text-agro-600"></i>
+          </summary>
+          <p class="text-sm text-agro-800/70 mt-3">Your inventory data is stored locally in your browser. Pro accounts get optional encrypted cloud sync.</p>
+        </details>
+        <details class="group bg-cream rounded-2xl border border-agro-100 p-5 cursor-pointer">
+          <summary class="font-semibold flex items-center justify-between list-none">
+            <span>Does it work offline?</span>
+            <i class="fa-solid fa-plus group-open:rotate-45 transition text-agro-600"></i>
+          </summary>
+          <p class="text-sm text-agro-800/70 mt-3">Absolutely. Once loaded, the dashboard works fully offline — perfect for fields without reliable internet.</p>
+        </details>
+        <details class="group bg-cream rounded-2xl border border-agro-100 p-5 cursor-pointer">
+          <summary class="font-semibold flex items-center justify-between list-none">
+            <span>Can I export my inventory data?</span>
+            <i class="fa-solid fa-plus group-open:rotate-45 transition text-agro-600"></i>
+          </summary>
+          <p class="text-sm text-agro-800/70 mt-3">Yes. Export to CSV, Excel, or PDF directly from the Reports page in your dashboard.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-agro-900 text-white/80 pt-16 pb-8 mt-10">
     <div class="container mx-auto px-5 lg:px-8 grid md:grid-cols-4 gap-10">
       <div class="md:col-span-2">

@@ -20,8 +20,8 @@
   <div class="flex min-h-screen">
 
     <!-- ========= SIDEBAR ========= -->
-    <aside id="sidebar" class="fixed lg:sticky top-0 h-screen w-72 bg-white border-r border-agro-100 flex-shrink-0 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-300">
-      <div class="p-6 flex items-center justify-between">
+    <aside id="sidebar" class="fixed top-0 left-0 h-screen w-72 bg-white border-r border-agro-100 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
+      <div class="p-6 flex items-center justify-between flex-shrink-0">
         <a href="index.html" class="flex items-center gap-2">
           <div class="w-10 h-10 rounded-xl bg-agro-600 grid place-items-center shadow-lg shadow-agro-600/30"><i class="fa-solid fa-seedling text-white"></i></div>
           <span class="text-lg font-bold">Modern<span class="text-agro-600">Agro</span></span>
@@ -29,206 +29,233 @@
         <button id="closeSidebar" class="lg:hidden w-8 h-8 grid place-items-center rounded-lg hover:bg-agro-50"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <nav class="px-4 mt-2 space-y-1">
-        <a href="#" class="side-link active" data-page="overview">
-          <i class="fa-solid fa-chart-pie w-5"></i> <span>Overview</span>
-        </a>
-        <a href="#" class="side-link" data-page="inventory">
-          <i class="fa-solid fa-boxes-stacked w-5"></i> <span>Inventory</span>
-          <span id="invBadge" class="ml-auto bg-agro-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
-        </a>
-        <a href="#" class="side-link" data-page="categories">
-          <i class="fa-solid fa-layer-group w-5"></i> <span>Categories</span>
-        </a>
-        <a href="#" class="side-link" data-page="reports">
-          <i class="fa-solid fa-file-lines w-5"></i> <span>Reports</span>
-        </a>
-        <a href="#" class="side-link" data-page="settings">
-          <i class="fa-solid fa-gear w-5"></i> <span>Settings</span>
-        </a>
+      <!-- Pro card up top -->
+      <div class="px-4 flex-shrink-0">
+        <div class="bg-gradient-to-br from-agro-600 to-agro-800 rounded-2xl p-4 text-white overflow-hidden relative">
+          <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full"></div>
+          <div class="flex items-center gap-2 relative">
+            <i class="fa-solid fa-crown text-amber-300"></i>
+            <h4 class="font-bold text-sm">Go Pro</h4>
+          </div>
+          <p class="text-xs text-white/80 mt-1.5 relative">Unlock advanced analytics &amp; multi-farm support.</p>
+          <button class="mt-3 bg-white text-agro-800 text-xs font-semibold px-3 py-1.5 rounded-full hover:-translate-y-0.5 transition relative">Upgrade</button>
+        </div>
+      </div>
+
+      <nav class="px-4 mt-5 space-y-1 flex-1 overflow-y-auto">
+        <a href="#" class="side-link active" data-page="overview"><i class="fa-solid fa-chart-pie w-5"></i> <span>Overview</span></a>
+        <a href="#" class="side-link" data-page="inventory"><i class="fa-solid fa-boxes-stacked w-5"></i> <span>Inventory</span><span id="invBadge" class="ml-auto bg-agro-600 text-white text-xs px-2 py-0.5 rounded-full">0</span></a>
+        <a href="#" class="side-link" data-page="categories"><i class="fa-solid fa-layer-group w-5"></i> <span>Categories</span></a>
+        <a href="#" class="side-link" data-page="reports"><i class="fa-solid fa-file-lines w-5"></i> <span>Reports</span></a>
+        <a href="#" class="side-link" data-page="settings"><i class="fa-solid fa-gear w-5"></i> <span>Settings</span></a>
       </nav>
 
-      <div class="absolute bottom-6 left-4 right-4 bg-gradient-to-br from-agro-600 to-agro-800 rounded-2xl p-5 text-white overflow-hidden relative">
-        <div class="absolute -right-6 -top-6 w-24 h-24 bg-white/10 rounded-full"></div>
-        <i class="fa-solid fa-crown text-amber-300"></i>
-        <h4 class="font-bold mt-2">Go Pro</h4>
-        <p class="text-xs text-white/80 mt-1">Unlock advanced analytics and multi-farm support.</p>
-        <button class="mt-3 bg-white text-agro-800 text-xs font-semibold px-3 py-1.5 rounded-full hover:-translate-y-0.5 transition">Upgrade</button>
+      <div class="p-4 border-t border-agro-100 flex-shrink-0">
+        <div class="flex items-center gap-3">
+          <img src="assets/avatar.svg" class="w-9 h-9 rounded-full object-cover border-2 border-agro-200"/>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold truncate">Ratul Ahmed Saikat</div>
+            <div class="text-xs text-agro-800/60 truncate">Founder & CEO</div>
+          </div>
+          <button class="text-agro-800/50 hover:text-agro-700"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
       </div>
     </aside>
 
-    <!-- backdrop -->
     <div id="sidebarBackdrop" class="fixed inset-0 bg-black/40 z-30 hidden lg:hidden"></div>
 
     <!-- ========= MAIN ========= -->
-    <main class="flex-1 min-w-0">
-
-      <!-- top bar -->
-      <header class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-agro-100 z-20">
+     <main class="flex-1 min-w-0 lg:ml-72">
+      <!-- TOP BAR — fixed -->
+      <header class="fixed top-0 right-0 left-0 lg:left-72 bg-white/85 backdrop-blur-md border-b border-agro-100 z-20">
         <div class="flex items-center gap-4 px-5 lg:px-8 py-4">
           <button id="openSidebar" class="lg:hidden w-10 h-10 grid place-items-center rounded-lg bg-agro-50"><i class="fa-solid fa-bars text-agro-700"></i></button>
-
           <div class="flex-1 max-w-md relative">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-agro-800/40"></i>
-            <input id="globalSearch" type="text" placeholder="Search products, categories..." class="w-full pl-11 pr-4 py-2.5 rounded-full bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none transition text-sm"/>
+            <input id="globalSearch" type="text" placeholder="Search products..." class="w-full pl-11 pr-4 py-2.5 rounded-full bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none transition text-sm"/>
           </div>
-
-          <button class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-agro-50 hover:bg-agro-100 relative">
+          <!-- <button class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-agro-50 hover:bg-agro-100 relative">
             <i class="fa-regular fa-bell text-agro-700"></i>
             <span class="absolute top-2 right-2 w-2 h-2 bg-amber-500 rounded-full"></span>
+          </button> -->
+          <div class="hidden sm:block relative" id="notificationWrapper">
+          <button id="notificationBellButton" class="grid w-10 h-10 place-items-center rounded-full bg-agro-50 hover:bg-agro-100 relative focus:outline-none focus:ring-2 focus:ring-agro-300 transition" aria-label="Notifications" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-regular fa-bell text-agro-700"></i>
+            <span class="absolute top-2 right-2.5 w-2.5 h-2.5 bg-amber-500 rounded-full border border-white"></span>
           </button>
 
-          <div class="flex items-center gap-3">
-            <img src="assets/avatar.jpg" alt="User" class="w-10 h-10 rounded-full object-cover border-2 border-agro-200"/>
-            <div class="hidden md:block">
-              <div class="text-sm font-semibold leading-tight">Arif Rahman</div>
-              <div class="text-xs text-agro-800/60">Farm Manager</div>
+          <div id="notificationDropdown" class="hidden absolute top-full right-0 mt-3 w-80 md:w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-xl border border-agro-100 z-50 overflow-hidden transform transition-all duration-200 ease-out origin-top-right scale-95 opacity-0">
+            <div class="px-5 py-4 border-b border-agro-100 flex items-center justify-between bg-agro-50/30">
+              <h3 class="text-base font-semibold text-agro-900">Notifications</h3>
+              <span class="text-xs font-medium text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">3 New</span>
+            </div>
+
+            <div class="max-h-[70vh] overflow-y-auto">
+              <a href="#" class="flex gap-4 px-5 py-4 border-b border-agro-100/50 hover:bg-agro-50/50 transition bg-agro-50/20">
+                <span class="relative flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 text-amber-600 grid place-items-center">
+                  <i class="fa-solid fa-truck-fast"></i>
+                  <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-amber-500 rounded-full border-2 border-agro-50/20"></span>
+                </span>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-agro-900 line-clamp-2">Your order <span class="font-semibold">#AG881</span> has been shipped!</p>
+                  <time class="text-xs text-agro-600 mt-1">2 minutes ago</time>
+                </div>
+              </a>
+
+              <a href="#" class="flex gap-4 px-5 py-4 border-b border-agro-100/50 hover:bg-agro-50/50 transition">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-agro-100/70 text-agro-600 grid place-items-center">
+                  <i class="fa-regular fa-comment-dots"></i>
+                </span>
+                <div class="flex-1">
+                  <p class="text-sm text-agro-800">Support agent replied to your ticket regarding product stock.</p>
+                  <time class="text-xs text-agro-500 mt-1">1 hour ago</time>
+                </div>
+              </a>
+
+              <a href="#" class="flex gap-4 px-5 py-4 hover:bg-agro-50/50 transition">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 text-green-700 grid place-items-center">
+                  <i class="fa-solid fa-clipboard-check"></i>
+                </span>
+                <div class="flex-1">
+                  <p class="text-sm text-agro-800">Your recent purchase <span class="font-medium text-agro-900">#AG875</span> has been confirmed.</p>
+                  <time class="text-xs text-agro-500 mt-1">5 hours ago</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="border-t border-agro-100 bg-agro-50/50">
+              <a href="#" class="block px-5 py-3 text-sm text-center font-medium text-agro-700 hover:text-agro-900 transition">View All Notifications</a>
             </div>
           </div>
+        </div>
+          <img src="assets/avatar.svg" alt="User" class="w-10 h-10 rounded-full object-cover border-2 border-agro-200"/>
         </div>
       </header>
-
-      <!-- ===== PAGE: OVERVIEW ===== -->
-      <section id="page-overview" class="page p-5 lg:p-8">
-        <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
+ 
+      <!-- spacer for fixed top bar -->
+      <div class="h-16 sm:h-[72px]"></div>
+ 
+      <!-- OVERVIEW -->
+      <section id="page-overview" class="page p-3 sm:p-5 lg:p-8">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6 sm:mb-8">
           <div>
-            <h1 class="font-serif text-4xl">Good morning, Arif 👋</h1>
-            <p class="text-agro-800/60 mt-1 text-sm">Here's what's happening at your farm today.</p>
+            <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl">Good morning, Ratul 👋</h1>
+            <p class="text-agro-800/60 mt-1 text-xs sm:text-sm">Here's what's happening at your farm today.</p>
           </div>
-          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5">
-            <i class="fa-solid fa-plus mr-1"></i> Add Product
-          </button>
+          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5"><i class="fa-solid fa-plus mr-1"></i> Add Product</button>
         </div>
-
-        <!-- Stat cards -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+ 
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+          <div class="stat-card bg-white p-4 sm:p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
             <div class="flex items-center justify-between">
-              <div class="w-11 h-11 rounded-xl bg-agro-100 text-agro-700 grid place-items-center"><i class="fa-solid fa-boxes-stacked"></i></div>
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-agro-100 text-agro-700 grid place-items-center"><i class="fa-solid fa-boxes-stacked"></i></div>
               <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+12%</span>
             </div>
-            <div class="mt-4 text-3xl font-bold" id="statTotal">0</div>
-            <div class="text-sm text-agro-800/60 mt-1">Total Products</div>
+            <div class="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold" id="statTotal">0</div>
+            <div class="text-xs sm:text-sm text-agro-800/60 mt-0.5">Total Products</div>
           </div>
-
-          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+          <div class="stat-card bg-white p-4 sm:p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
             <div class="flex items-center justify-between">
-              <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 grid place-items-center"><i class="fa-solid fa-warehouse"></i></div>
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-amber-100 text-amber-700 grid place-items-center"><i class="fa-solid fa-warehouse"></i></div>
               <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+5%</span>
             </div>
-            <div class="mt-4 text-3xl font-bold" id="statStock">0</div>
-            <div class="text-sm text-agro-800/60 mt-1">Total Stock (kg)</div>
+            <div class="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold" id="statStock">0</div>
+            <div class="text-xs sm:text-sm text-agro-800/60 mt-0.5">Total Stock (kg)</div>
           </div>
-
-          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+          <div class="stat-card bg-white p-4 sm:p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
             <div class="flex items-center justify-between">
-              <div class="w-11 h-11 rounded-xl bg-red-100 text-red-700 grid place-items-center"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-red-100 text-red-700 grid place-items-center"><i class="fa-solid fa-triangle-exclamation"></i></div>
               <span class="text-xs text-red-600 bg-red-50 px-2 py-0.5 rounded-full font-semibold">Alert</span>
             </div>
-            <div class="mt-4 text-3xl font-bold" id="statLow">0</div>
-            <div class="text-sm text-agro-800/60 mt-1">Low Stock Items</div>
+            <div class="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold" id="statLow">0</div>
+            <div class="text-xs sm:text-sm text-agro-800/60 mt-0.5">Low Stock</div>
           </div>
-
-          <div class="stat-card bg-white p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
+          <div class="stat-card bg-white p-4 sm:p-6 rounded-2xl border border-agro-100 hover:-translate-y-1 transition shadow-sm">
             <div class="flex items-center justify-between">
-              <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-700 grid place-items-center"><i class="fa-solid fa-dollar-sign"></i></div>
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-100 text-blue-700 grid place-items-center"><i class="fa-solid fa-dollar-sign"></i></div>
               <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-full font-semibold">+18%</span>
             </div>
-            <div class="mt-4 text-3xl font-bold">$<span id="statValue">0</span></div>
-            <div class="text-sm text-agro-800/60 mt-1">Inventory Value</div>
+            <div class="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold">$<span id="statValue">0</span></div>
+            <div class="text-xs sm:text-sm text-agro-800/60 mt-0.5">Inventory Value</div>
           </div>
         </div>
-
-        <!-- Chart + sidecard -->
-        <div class="grid lg:grid-cols-3 gap-5 mt-6">
-          <div class="lg:col-span-2 bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+ 
+        <div class="grid lg:grid-cols-3 gap-5 mt-5 sm:mt-6">
+          <div class="lg:col-span-2 bg-white rounded-2xl border border-agro-100 p-4 sm:p-6 shadow-sm">
             <div class="flex items-center justify-between flex-wrap gap-3">
               <div>
-                <h3 class="font-bold text-lg">Monthly Yield Overview</h3>
+                <h3 class="font-bold text-base sm:text-lg">Monthly Yield Overview</h3>
                 <p class="text-xs text-agro-800/60 mt-0.5">Harvest output across categories</p>
               </div>
-              <div class="flex gap-2 text-xs">
+              <div class="flex flex-wrap gap-2 text-xs">
                 <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-agro-600"></span>Grains</span>
                 <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-amber-500"></span>Vegetables</span>
                 <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-earth"></span>Fruits</span>
               </div>
             </div>
-            <div class="mt-6 h-72">
-              <canvas id="yieldChart"></canvas>
-            </div>
+            <div class="mt-5 sm:mt-6 h-60 sm:h-72"><canvas id="yieldChart"></canvas></div>
           </div>
-
-          <div class="bg-gradient-to-br from-agro-700 to-agro-900 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+ 
+          <div class="bg-gradient-to-br from-agro-700 to-agro-900 rounded-2xl p-5 sm:p-6 text-white shadow-lg relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
             <i class="fa-solid fa-sun text-amber-300 text-2xl"></i>
             <h3 class="font-bold text-lg mt-3">Weather Today</h3>
             <p class="text-white/80 text-sm mt-1">Dhaka, Bangladesh</p>
-            <div class="mt-6 text-5xl font-bold">28°C</div>
+            <div class="mt-5 sm:mt-6 text-4xl sm:text-5xl font-bold">28°C</div>
             <p class="text-sm text-white/80 mt-1">Sunny · Ideal for harvesting</p>
-            <div class="grid grid-cols-3 gap-3 mt-6 text-center text-xs">
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-5 sm:mt-6 text-center text-xs">
               <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-droplet text-blue-300"></i><div class="mt-1">65%</div></div>
               <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-wind text-white/80"></i><div class="mt-1">12km/h</div></div>
               <div class="bg-white/10 rounded-xl py-3"><i class="fa-solid fa-eye text-white/80"></i><div class="mt-1">10km</div></div>
             </div>
           </div>
         </div>
-
-        <!-- Recent -->
-        <div class="bg-white rounded-2xl border border-agro-100 p-6 mt-6 shadow-sm">
+ 
+        <div class="bg-white rounded-2xl border border-agro-100 p-4 sm:p-6 mt-5 sm:mt-6 shadow-sm">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="font-bold text-lg">Recent Activity</h3>
-            <a href="#" class="text-agro-600 text-sm font-semibold" data-nav="inventory">View all →</a>
+            <h3 class="font-bold text-base sm:text-lg">Recent Activity</h3>
+            <a href="#" class="text-agro-600 text-xs sm:text-sm font-semibold" data-nav="inventory">View all →</a>
           </div>
-          <div id="recentList" class="space-y-3"></div>
+          <div id="recentList" class="space-y-2"></div>
         </div>
       </section>
-
-      <!-- ===== PAGE: INVENTORY ===== -->
-      <section id="page-inventory" class="page hidden p-5 lg:p-8">
-        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+ 
+      <!-- INVENTORY -->
+      <section id="page-inventory" class="page hidden p-3 sm:p-5 lg:p-8">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-5 sm:mb-6">
           <div>
-            <h1 class="font-serif text-4xl">Inventory</h1>
-            <p class="text-agro-800/60 mt-1 text-sm">Manage all your agricultural products in one place.</p>
+            <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl">Inventory</h1>
+            <p class="text-agro-800/60 mt-1 text-xs sm:text-sm">Manage all your agricultural products.</p>
           </div>
-          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5">
-            <i class="fa-solid fa-plus mr-1"></i> Add Product
-          </button>
+          <button class="add-product-btn bg-agro-600 hover:bg-agro-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5"><i class="fa-solid fa-plus mr-1"></i> Add Product</button>
         </div>
-
-        <!-- filters -->
-        <div class="bg-white rounded-2xl border border-agro-100 p-4 mb-5 flex flex-wrap gap-3 items-center shadow-sm">
-          <div class="flex-1 min-w-[200px] relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-agro-800/40"></i>
-            <input id="invSearch" type="text" placeholder="Search products..." class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none text-sm"/>
+ 
+        <div class="bg-white rounded-2xl border border-agro-100 p-3 sm:p-4 mb-4 sm:mb-5 flex flex-wrap gap-2 sm:gap-3 items-center shadow-sm">
+          <div class="flex-1 min-w-[140px] sm:min-w-[200px] relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-agro-800/40 text-sm"></i>
+            <input id="invSearch" type="text" placeholder="Search..." class="w-full pl-9 sm:pl-11 pr-3 py-2 sm:py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 focus:ring-2 focus:ring-agro-200 outline-none text-xs sm:text-sm"/>
           </div>
-          <select id="invCategory" class="px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-sm">
+          <select id="invCategory" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-xs sm:text-sm">
             <option value="">All Categories</option>
-            <option>Grains</option>
-            <option>Vegetables</option>
-            <option>Fruits</option>
-            <option>Dairy</option>
-            <option>Seeds</option>
-            <option>Livestock Feed</option>
           </select>
-          <select id="invSort" class="px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-sm">
+          <select id="invSort" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-agro-50 border border-transparent focus:border-agro-300 outline-none text-xs sm:text-sm">
             <option value="name">Sort: Name</option>
             <option value="stock">Sort: Stock</option>
             <option value="price">Sort: Price</option>
           </select>
         </div>
-
-        <!-- table -->
+ 
         <div class="bg-white rounded-2xl border border-agro-100 overflow-hidden shadow-sm">
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead class="bg-agro-50 text-agro-700">
                 <tr>
-                  <th class="text-left px-5 py-3 font-semibold">Product</th>
-                  <th class="text-left px-5 py-3 font-semibold">Category</th>
-                  <th class="text-left px-5 py-3 font-semibold">Stock</th>
-                  <th class="text-left px-5 py-3 font-semibold">Price</th>
-                  <th class="text-left px-5 py-3 font-semibold">Status</th>
-                  <th class="text-right px-5 py-3 font-semibold">Actions</th>
+                  <th class="text-left px-3 sm:px-5 py-3 font-semibold">Product</th>
+                  <th class="text-left px-3 sm:px-5 py-3 font-semibold">Category</th>
+                  <th class="text-left px-3 sm:px-5 py-3 font-semibold">Stock</th>
+                  <th class="text-left px-3 sm:px-5 py-3 font-semibold">Price</th>
+                  <th class="text-left px-3 sm:px-5 py-3 font-semibold">Status</th>
+                  <th class="text-right px-3 sm:px-5 py-3 font-semibold">Actions</th>
                 </tr>
               </thead>
               <tbody id="invBody"></tbody>
@@ -240,61 +267,60 @@
           </div>
         </div>
       </section>
-
-      <!-- ===== PAGE: CATEGORIES ===== -->
-      <section id="page-categories" class="page hidden p-5 lg:p-8">
-        <h1 class="font-serif text-4xl">Categories</h1>
-        <p class="text-agro-800/60 mt-1 text-sm">Product distribution across categories.</p>
-
-        <div id="catGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6"></div>
-      </section>
-
-      <!-- ===== PAGE: REPORTS ===== -->
-      <section id="page-reports" class="page hidden p-5 lg:p-8">
-        <h1 class="font-serif text-4xl">Reports</h1>
-        <p class="text-agro-800/60 mt-1 text-sm">Insights and summaries of your inventory.</p>
-
-        <div class="grid lg:grid-cols-2 gap-5 mt-6">
-          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
-            <h3 class="font-bold text-lg">Stock Distribution</h3>
-            <p class="text-xs text-agro-800/60 mt-0.5">By category</p>
-            <div class="mt-5 h-72"><canvas id="distChart"></canvas></div>
+ 
+      <!-- CATEGORIES -->
+      <section id="page-categories" class="page hidden p-3 sm:p-5 lg:p-8">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-5 sm:mb-6">
+          <div>
+            <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl">Categories</h1>
+            <p class="text-agro-800/60 mt-1 text-xs sm:text-sm">Organize your products.</p>
           </div>
-
-          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
-            <h3 class="font-bold text-lg">Top 5 Products by Value</h3>
+          <button id="addCategoryBtn" class="bg-agro-600 hover:bg-agro-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-agro-600/20 transition hover:-translate-y-0.5"><i class="fa-solid fa-plus mr-1"></i> Add Category</button>
+        </div>
+        <div id="catGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"></div>
+      </section>
+ 
+      <!-- REPORTS -->
+      <section id="page-reports" class="page hidden p-3 sm:p-5 lg:p-8">
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl">Reports</h1>
+        <p class="text-agro-800/60 mt-1 text-xs sm:text-sm">Insights and summaries of your inventory.</p>
+ 
+        <div class="grid lg:grid-cols-2 gap-5 mt-5 sm:mt-6">
+          <div class="bg-white rounded-2xl border border-agro-100 p-4 sm:p-6 shadow-sm">
+            <h3 class="font-bold text-base sm:text-lg">Stock Distribution</h3>
+            <p class="text-xs text-agro-800/60 mt-0.5">By category</p>
+            <div class="mt-5 h-60 sm:h-72"><canvas id="distChart"></canvas></div>
+          </div>
+          <div class="bg-white rounded-2xl border border-agro-100 p-4 sm:p-6 shadow-sm">
+            <h3 class="font-bold text-base sm:text-lg">Top 5 Products by Value</h3>
             <div id="topList" class="mt-4 space-y-3"></div>
           </div>
         </div>
-
-        <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm mt-5">
-          <h3 class="font-bold text-lg">Summary</h3>
-          <div id="summaryGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4"></div>
+ 
+        <div class="bg-white rounded-2xl border border-agro-100 p-4 sm:p-6 shadow-sm mt-5">
+          <h3 class="font-bold text-base sm:text-lg">Summary</h3>
+          <div id="summaryGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-4"></div>
         </div>
       </section>
-
-      <!-- ===== PAGE: SETTINGS ===== -->
-      <section id="page-settings" class="page hidden p-5 lg:p-8">
-        <h1 class="font-serif text-4xl">Settings</h1>
-        <p class="text-agro-800/60 mt-1 text-sm">Manage your farm profile and preferences.</p>
-
-        <div class="grid lg:grid-cols-3 gap-5 mt-6">
-          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+ 
+      <!-- SETTINGS -->
+      <section id="page-settings" class="page hidden p-3 sm:p-5 lg:p-8">
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl">Settings</h1>
+        <p class="text-agro-800/60 mt-1 text-xs sm:text-sm">Manage your farm profile and preferences.</p>
+ 
+        <div class="grid lg:grid-cols-3 gap-4 sm:gap-5 mt-5 sm:mt-6">
+          <div class="bg-white rounded-2xl border border-agro-100 p-5 sm:p-6 shadow-sm">
             <h3 class="font-bold">Profile</h3>
             <div class="flex items-center gap-4 mt-4">
-              <img src="assets/avatar.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-agro-200"/>
-              <div>
-                <div class="font-semibold">Arif Rahman</div>
-                <div class="text-xs text-agro-800/60">arif@modernagro.com</div>
-              </div>
+              <img src="assets/avatar.svg" class="w-16 h-16 rounded-full object-cover border-2 border-agro-200"/>
+              <div><div class="font-semibold">Arif Rahman</div><div class="text-xs text-agro-800/60">arif@modernagro.com</div></div>
             </div>
             <div class="space-y-3 mt-5 text-sm">
               <div><label class="text-xs text-agro-800/60">Farm Name</label><input class="w-full mt-1 px-3 py-2 rounded-lg bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 outline-none" value="Green Valley Farm"/></div>
               <div><label class="text-xs text-agro-800/60">Location</label><input class="w-full mt-1 px-3 py-2 rounded-lg bg-agro-50 border border-transparent focus:bg-white focus:border-agro-300 outline-none" value="Dhaka, Bangladesh"/></div>
             </div>
           </div>
-
-          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+          <div class="bg-white rounded-2xl border border-agro-100 p-5 sm:p-6 shadow-sm">
             <h3 class="font-bold">Preferences</h3>
             <div class="mt-4 space-y-4 text-sm">
               <label class="flex items-center justify-between"><span>Email Alerts</span><input type="checkbox" checked class="toggle"/></label>
@@ -303,22 +329,21 @@
               <label class="flex items-center justify-between"><span>Dark Mode</span><input type="checkbox" class="toggle"/></label>
             </div>
           </div>
-
-          <div class="bg-white rounded-2xl border border-agro-100 p-6 shadow-sm">
+          <div class="bg-white rounded-2xl border border-agro-100 p-5 sm:p-6 shadow-sm">
             <h3 class="font-bold">Data</h3>
-            <p class="text-xs text-agro-800/60 mt-1">Your inventory is stored locally in your browser.</p>
+            <p class="text-xs text-agro-800/60 mt-1">Stored locally in your browser.</p>
             <button id="resetData" class="mt-5 w-full bg-red-50 hover:bg-red-100 text-red-700 py-2.5 rounded-xl text-sm font-semibold transition"><i class="fa-solid fa-trash mr-1"></i> Reset All Data</button>
             <button id="seedData" class="mt-2 w-full bg-agro-50 hover:bg-agro-100 text-agro-700 py-2.5 rounded-xl text-sm font-semibold transition"><i class="fa-solid fa-seedling mr-1"></i> Load Sample Data</button>
           </div>
         </div>
       </section>
-
+ 
     </main>
   </div>
 
-  <!-- ====== MODAL ====== -->
+  <!-- ====== Product MODAL ====== -->
   <div id="productModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl animate-[pop_.3s_ease]">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl confirm-card">
       <div class="flex items-center justify-between">
         <h3 id="modalTitle" class="font-serif text-2xl">Add Product</h3>
         <button id="closeModal" class="w-9 h-9 grid place-items-center rounded-full hover:bg-agro-50"><i class="fa-solid fa-xmark"></i></button>
@@ -332,10 +357,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="text-sm font-medium">Category</label>
-            <select required id="pcategory" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none">
-              <option>Grains</option><option>Vegetables</option><option>Fruits</option>
-              <option>Dairy</option><option>Seeds</option><option>Livestock Feed</option>
-            </select>
+            <select required id="pcategory" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none"></select>
           </div>
           <div>
             <label class="text-sm font-medium">Unit</label>
@@ -363,11 +385,126 @@
     </div>
   </div>
 
-  <!-- Toast -->
-  <div id="toast" class="fixed bottom-6 right-6 bg-agro-800 text-white px-5 py-3 rounded-xl shadow-xl translate-y-20 opacity-0 transition-all z-50 text-sm"></div>
+  <!-- ====== Category MODAL ====== -->
+  <div id="categoryModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl confirm-card">
+      <div class="flex items-center justify-between">
+        <h3 class="font-serif text-2xl">Add Category</h3>
+        <button id="closeCategoryModal" class="w-9 h-9 grid place-items-center rounded-full hover:bg-agro-50"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="categoryForm" class="mt-6 space-y-4">
+        <div>
+          <label class="text-sm font-medium">Category Name</label>
+          <input required id="catName" type="text" class="mt-1 w-full px-4 py-2.5 rounded-xl bg-agro-50 border border-transparent focus:bg-white focus:border-agro-500 outline-none" placeholder="e.g. Spices"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium mb-2 block">Pick an Icon</label>
+          <div id="iconPicker" class="grid grid-cols-6 gap-2"></div>
+          <input type="hidden" id="catIcon" value="fa-leaf"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium mb-2 block">Pick a Color</label>
+          <div id="colorPicker" class="grid grid-cols-6 gap-2"></div>
+          <input type="hidden" id="catColor" value="bg-agro-100 text-agro-700"/>
+        </div>
+        <button type="submit" class="w-full bg-agro-600 hover:bg-agro-700 text-white py-3 rounded-xl font-semibold shadow-lg shadow-agro-600/25 transition hover:-translate-y-0.5">Create Category</button>
+      </form>
+    </div>
+  </div>
 
-  <!-- Scripts -->
+  <!-- ====== Confirm Dialog ====== -->
+  <div id="confirmModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="confirm-card bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl text-center">
+      <div class="w-16 h-16 rounded-full bg-red-100 grid place-items-center mx-auto">
+        <i id="confirmIcon" class="fa-solid fa-triangle-exclamation text-red-600 text-2xl"></i>
+      </div>
+      <h3 id="confirmTitle" class="font-serif text-2xl mt-4">Are you sure?</h3>
+      <p id="confirmMessage" class="text-sm text-agro-800/70 mt-2">This action cannot be undone.</p>
+      <div class="flex gap-3 mt-6">
+        <button id="confirmCancel" class="flex-1 bg-agro-50 hover:bg-agro-100 text-agro-800 py-2.5 rounded-xl font-semibold transition">Cancel</button>
+        <button id="confirmOk" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2.5 rounded-xl font-semibold transition shadow-lg shadow-red-600/25">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="success">
+    <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+    <span id="toastMsg">Done</span>
+  </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const notificationWrapper = document.getElementById('notificationWrapper');
+        const bellButton = document.getElementById('notificationBellButton');
+        const dropdown = document.getElementById('notificationDropdown');
+
+        // Function to show the dropdown with animation
+        const showDropdown = () => {
+            dropdown.classList.remove('hidden'); // Ensure it's rendered
+            
+            // Force a brief delay so the browser registers the state change before animating
+            requestAnimationFrame(() => {
+                dropdown.classList.remove('scale-95', 'opacity-0');
+                dropdown.classList.add('scale-100', 'opacity-100');
+                bellButton.setAttribute('aria-expanded', 'true');
+            });
+        };
+
+        // Function to hide the dropdown with animation
+        const hideDropdown = () => {
+            dropdown.classList.remove('scale-100', 'opacity-100');
+            dropdown.classList.add('scale-95', 'opacity-0');
+            bellButton.setAttribute('aria-expanded', 'false');
+
+            // Wait for the transition duration before hiding it completely
+            setTimeout(() => {
+                // Check again in case it was re-opened during the animation
+                if (dropdown.classList.contains('opacity-0')) {
+                    dropdown.classList.add('hidden');
+                }
+            }, 200); // Must match the Tailwind transition duration (200ms)
+        };
+
+        // Toggle dropdown when the bell button is clicked
+        bellButton.addEventListener('click', (event) => {
+            // Prevent this click from bubbling up and being caught by the outside-click listener
+            event.stopPropagation();
+
+            const isVisible = !dropdown.classList.contains('hidden') && dropdown.classList.contains('opacity-100');
+
+            if (isVisible) {
+                hideDropdown();
+            } else {
+                showDropdown();
+            }
+        });
+
+        // Dismiss the notification view when clicking outside
+        document.addEventListener('click', (event) => {
+            // Check if the click occurred OUTSIDE the wrapper element (button + dropdown)
+            if (!notificationWrapper.contains(event.target)) {
+                // Check if the dropdown is currently shown
+                const isVisible = !dropdown.classList.contains('hidden') && dropdown.classList.contains('opacity-100');
+                if (isVisible) {
+                    hideDropdown();
+                }
+            }
+        });
+
+        // Handle pressing the Escape key to close the dropdown
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                const isVisible = !dropdown.classList.contains('hidden') && dropdown.classList.contains('opacity-100');
+                if (isVisible) {
+                    hideDropdown();
+                    bellButton.focus(); // Good accessibility practice: return focus to the button
+                }
+            }
+        });
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/dashboard.js"></script>
 </body>
 </html>
+      

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DC2626"/><stop offset="1" stop-color="#991B1B"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#ffffff" opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="600" height="400" fill="url(#dots)"/>
+  
+  <g transform="translate(300 210)">
+    <circle cx="0" cy="0" r="65" fill="#EF4444"/>
+    <path d="M-25 -45 Q0 -60 25 -45 Q0 -35 -25 -45Z" fill="#F87171" opacity=".7"/>
+    <path d="M0 -65 L0 -80 L-5 -85 Q 0 -90 5 -85 L5 -80" stroke="#166534" stroke-width="4" fill="none"/>
+    <path d="M5 -75 Q 20 -82 25 -70 Q 15 -68 5 -75Z" fill="#166534"/>
+    <g transform="translate(-90 30)">
+      <circle r="35" fill="#FBBF24"/>
+      <ellipse cx="-5" cy="-5" rx="12" ry="10" fill="#FCD34D" opacity=".7"/>
+      <path d="M0 -35 L-3 -45 L3 -45 Z" fill="#166534"/>
+    </g>
+    <g transform="translate(85 40)">
+      <circle r="40" fill="#7C2D12"/>
+      <circle cx="-8" cy="-8" rx="8" fill="#92400E"/>
+      <path d="M0 -40 L-4 -50 L4 -50 Z" fill="#166534"/>
+      <path d="M0 -48 Q 15 -52 18 -42" stroke="#166534" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+</svg>

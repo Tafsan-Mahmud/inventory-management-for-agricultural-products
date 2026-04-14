@@ -18,7 +18,6 @@
 </head>
 <body class="font-sans bg-cream text-agro-900">
 
-  <!-- NAV (same) -->
   <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-5 lg:px-8">
       <nav class="flex items-center justify-between py-4">
@@ -49,37 +48,38 @@
     </div>
   </header>
 
-  <!-- page header -->
-  <section class="pt-36 pb-12 bg-white">
-    <div class="container mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+  <!-- Hero -->
+  <section class="pt-32 pb-12 lg:pt-40 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-agro-200/30 rounded-full blur-3xl -z-0"></div>
+    <div class="container mx-auto px-5 lg:px-8 text-center relative">
       <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
-      <h1 class="font-serif text-5xl md:text-6xl mt-2">Rooted in the land. <br/>Grown with <span class="text-agro-600">technology.</span></h1>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl mt-2 leading-tight">Rooted in the land. <br/>Grown with <span class="text-agro-600">technology.</span></h1>
       <p class="max-w-2xl mx-auto mt-5 text-agro-800/70">We believe farming deserves tools as modern as any Fortune-500 office. Modern Agro is our answer.</p>
     </div>
   </section>
 
-  <!-- story -->
+  <!-- Story -->
   <section class="py-16">
     <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div data-aos="fade-right">
-        <img src="assets/about-story.jpg" alt="Farmer using tablet in the field" class="rounded-3xl shadow-2xl w-full h-[480px] object-cover"/>
+      <div data-aos="fade-up">
+        <img src="assets/about-story.png" alt="Farmer using tablet" class="rounded-3xl shadow-2xl w-full h-[400px] md:h-[480px] object-cover"/>
       </div>
-      <div data-aos="fade-left">
-        <h2 class="font-serif text-4xl md:text-5xl leading-tight">Our Story</h2>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Our Story</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight mt-2">From a wet notebook to a smart dashboard.</h2>
         <p class="mt-4 text-agro-800/70 leading-relaxed">Modern Agro started on a rainy afternoon in 2021, when our founder watched his grandfather track an entire season's harvest in a soggy notebook. We knew there had to be a better way.</p>
         <p class="mt-3 text-agro-800/70 leading-relaxed">Today, thousands of farms across South Asia and beyond use Modern Agro to manage millions of kilograms of produce — without ever getting a page wet.</p>
-
-        <div class="grid grid-cols-3 gap-5 mt-8">
+        <div class="grid grid-cols-3 gap-4 mt-8">
           <div class="p-5 rounded-2xl bg-agro-50 border border-agro-100">
-            <div class="text-3xl font-bold text-agro-700">5+</div>
+            <div class="text-2xl sm:text-3xl font-bold text-agro-700">5+</div>
             <div class="text-xs text-agro-800/70 mt-1">Years</div>
           </div>
           <div class="p-5 rounded-2xl bg-agro-50 border border-agro-100">
-            <div class="text-3xl font-bold text-agro-700">12k</div>
+            <div class="text-2xl sm:text-3xl font-bold text-agro-700">12k</div>
             <div class="text-xs text-agro-800/70 mt-1">Farms</div>
           </div>
           <div class="p-5 rounded-2xl bg-agro-50 border border-agro-100">
-            <div class="text-3xl font-bold text-agro-700">40+</div>
+            <div class="text-2xl sm:text-3xl font-bold text-agro-700">40+</div>
             <div class="text-xs text-agro-800/70 mt-1">Countries</div>
           </div>
         </div>
@@ -87,63 +87,93 @@
     </div>
   </section>
 
-  <!-- values -->
+  <!-- Mission -->
   <section class="py-16 bg-white">
+    <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="lg:order-2" data-aos="fade-up">
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Our Mission</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight mt-2">Empower every farmer with data they can trust.</h2>
+        <p class="mt-4 text-agro-800/70 leading-relaxed">We're building the simplest, most beautiful inventory tool on the market — one that respects your time, your data, and the land you steward.</p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-agro-600 mt-1"></i><span>Free forever for individual farmers</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-agro-600 mt-1"></i><span>Open standards, no vendor lock-in</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-agro-600 mt-1"></i><span>Built with input from real farmers, every release</span></li>
+        </ul>
+      </div>
+      <div class="lg:order-1" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/showcase-2.svg" alt="Farm field" class="rounded-3xl shadow-2xl w-full h-[400px] md:h-[480px] object-cover"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-16">
     <div class="container mx-auto px-5 lg:px-8">
       <div class="text-center max-w-xl mx-auto" data-aos="fade-up">
-        <h2 class="font-serif text-4xl md:text-5xl">What We Value</h2>
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">What We Value</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-4xl mt-2">Three principles, every day.</h2>
         <p class="mt-4 text-agro-800/70">Three principles guide every line of code and every conversation with our farmers.</p>
       </div>
-
-      <div class="grid md:grid-cols-3 gap-6 mt-12">
-        <div class="p-8 rounded-3xl bg-cream border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid sm:grid-cols-3 gap-5 mt-12">
+        <div class="p-8 rounded-3xl bg-white border border-agro-100 hover:-translate-y-1 transition shadow-sm" data-aos="fade-up" data-aos-delay="50">
           <div class="w-14 h-14 rounded-2xl bg-agro-600 grid place-items-center text-white text-2xl"><i class="fa-solid fa-leaf"></i></div>
           <h3 class="mt-5 text-xl font-bold">Sustainability</h3>
-          <p class="mt-2 text-agro-800/70 text-sm">Digital records mean fewer resources wasted — and smarter harvests.</p>
+          <p class="mt-2 text-agro-800/70 text-sm">Digital records mean fewer resources wasted — and smarter harvests for the next generation.</p>
         </div>
-        <div class="p-8 rounded-3xl bg-cream border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-8 rounded-3xl bg-white border border-agro-100 hover:-translate-y-1 transition shadow-sm" data-aos="fade-up" data-aos-delay="100">
           <div class="w-14 h-14 rounded-2xl bg-earth grid place-items-center text-white text-2xl"><i class="fa-solid fa-handshake"></i></div>
           <h3 class="mt-5 text-xl font-bold">Trust</h3>
-          <p class="mt-2 text-agro-800/70 text-sm">Your data belongs to you. Always. Locally stored and secured.</p>
+          <p class="mt-2 text-agro-800/70 text-sm">Your data belongs to you. Always. Locally stored, encrypted, and never sold to third parties.</p>
         </div>
-        <div class="p-8 rounded-3xl bg-cream border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="300">
+        <div class="p-8 rounded-3xl bg-white border border-agro-100 hover:-translate-y-1 transition shadow-sm" data-aos="fade-up" data-aos-delay="150">
           <div class="w-14 h-14 rounded-2xl bg-amber-600 grid place-items-center text-white text-2xl"><i class="fa-solid fa-lightbulb"></i></div>
           <h3 class="mt-5 text-xl font-bold">Innovation</h3>
-          <p class="mt-2 text-agro-800/70 text-sm">We ship improvements weekly — because agriculture can't wait.</p>
+          <p class="mt-2 text-agro-800/70 text-sm">We ship improvements weekly — because agriculture can't wait for slow software.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- team -->
-  <section class="py-16">
+  <!-- Team -->
+  <section class="py-16 bg-white">
     <div class="container mx-auto px-5 lg:px-8">
       <div class="text-center max-w-xl mx-auto" data-aos="fade-up">
-        <h2 class="font-serif text-4xl md:text-5xl">Meet the Team</h2>
-        <p class="mt-4 text-agro-800/70">The humans behind Modern Agro.</p>
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">The Team</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl mt-2">Meet the humans behind the seeds.</h2>
       </div>
-
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-        <div class="bg-white p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="100">
-          <img src="assets/team-1.jpg" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover"/>
-          <h4 class="mt-4 font-bold">Arif Rahman</h4>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12">
+        <div class="bg-cream p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="50">
+          <img src="assets/team-1.svg" alt="Arif" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover"/>
+          <h4 class="mt-4 font-bold">Ratul Ahmed Saikat</h4>
           <p class="text-xs text-agro-800/60">Founder & CEO</p>
         </div>
-        <div class="bg-white p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/team-2.jpg" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover"/>
+        <div class="bg-cream p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/team-2.svg" alt="Sadia" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover"/>
           <h4 class="mt-4 font-bold">Sadia Khan</h4>
           <p class="text-xs text-agro-800/60">Head of Design</p>
         </div>
-        <div class="bg-white p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="300">
-          <img src="assets/team-3.jpg" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover"/>
+        <div class="bg-cream p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="150">
+          <img src="assets/team-3.svg" alt="Rafiq" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover"/>
           <h4 class="mt-4 font-bold">Rafiq Ahmed</h4>
           <p class="text-xs text-agro-800/60">Lead Engineer</p>
         </div>
-        <div class="bg-white p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="400">
-          <img src="assets/team-4.jpg" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover"/>
+        <div class="bg-cream p-5 rounded-3xl border border-agro-100 text-center hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/team-4.svg" alt="Nusrat" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover"/>
           <h4 class="mt-4 font-bold">Nusrat Jahan</h4>
           <p class="text-xs text-agro-800/60">Agri Specialist</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="bg-gradient-to-br from-agro-700 to-agro-900 rounded-3xl p-8 md:p-12 text-white text-center relative overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-10 -top-10 w-40 h-40 bg-agro-400/20 rounded-full blur-2xl"></div>
+        <h2 class="font-serif text-3xl md:text-4xl">Ready to join us?</h2>
+        <p class="mt-3 text-white/80 max-w-xl mx-auto">Try the Modern Agro dashboard right now — no signup required.</p>
+        <a href="dashboard.html" class="inline-flex items-center gap-2 mt-6 bg-white text-agro-800 px-6 py-3 rounded-full font-bold hover:-translate-y-0.5 transition shadow-xl">Open Dashboard <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#ffffff" opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="600" height="400" fill="url(#dots)"/>
+  
+  <g transform="translate(300 210)">
+    <path d="M-35 -80 L-35 -60 Q-35 -55 -40 -50 L-50 -30 Q-55 -20 -55 -10 L-55 70 Q-55 85 -40 85 L40 85 Q55 85 55 70 L55 -10 Q55 -20 50 -30 L40 -50 Q35 -55 35 -60 L35 -80 Z" fill="#FFFFFF"/>
+    <rect x="-35" y="-80" width="70" height="12" fill="#FBBF24"/>
+    <rect x="-40" y="0" width="80" height="50" fill="#F3F4F6"/>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#3b7730">MILK</text>
+    <circle cx="-85" cy="50" r="22" fill="#FEF3C7"/>
+    <path d="M-85 30 Q-72 35 -72 50 Q-72 62 -85 62 Q-98 62 -98 50 Q-98 35 -85 30Z" fill="#FDE68A"/>
+    <g transform="translate(90 60)">
+      <ellipse rx="25" ry="15" fill="#FEF3C7"/>
+      <ellipse rx="20" ry="5" fill="#F3F4F6" cy="-8"/>
+    </g>
+  </g>
+</svg>

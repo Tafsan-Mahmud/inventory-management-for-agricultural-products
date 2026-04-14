@@ -1,11 +1,7 @@
 /* ===== Modern Agro — Landing / main.js ===== */
 
-// Init AOS
-if (window.AOS) {
-  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic' });
-}
+if (window.AOS) AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
 
-// Navbar scroll effect
 const navbar = document.getElementById('navbar');
 const handleScroll = () => {
   if (window.scrollY > 20) navbar?.classList.add('scrolled');
@@ -14,7 +10,7 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 handleScroll();
 
-// Mobile menu toggle
+/* Mobile menu */
 const mobileBtn = document.getElementById('mobileBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 mobileBtn?.addEventListener('click', () => {
@@ -23,8 +19,16 @@ mobileBtn?.addEventListener('click', () => {
   icon?.classList.toggle('fa-bars');
   icon?.classList.toggle('fa-xmark');
 });
+mobileMenu?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    const icon = mobileBtn?.querySelector('i');
+    icon?.classList.add('fa-bars');
+    icon?.classList.remove('fa-xmark');
+  });
+});
 
-// Contact form (demo)
+/* Contact form demo */
 const contactForm = document.getElementById('contactForm');
 contactForm?.addEventListener('submit', (e) => {
   e.preventDefault();

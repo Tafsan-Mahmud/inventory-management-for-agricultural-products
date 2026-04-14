@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDE68A"/><stop offset="1" stop-color="#D97706"/></linearGradient></defs>
+  <rect width="400" height="400" fill="url(#g2)"/>
+  <g>
+    <rect x="0" y="300" width="400" height="100" fill="#3b7730"/>
+    <!-- wheat stalks -->
+    <g fill="#F59E0B">
+      <g transform="translate(80 200)">
+        <rect x="-2" y="0" width="4" height="120" fill="#3b7730"/>
+        <ellipse cx="0" cy="-10" rx="8" ry="14"/>
+        <ellipse cx="-10" cy="10" rx="6" ry="11"/>
+        <ellipse cx="10" cy="10" rx="6" ry="11"/>
+        <ellipse cx="-12" cy="30" rx="6" ry="11"/>
+        <ellipse cx="12" cy="30" rx="6" ry="11"/>
+      </g>
+      <g transform="translate(160 180)">
+        <rect x="-2" y="0" width="4" height="140" fill="#3b7730"/>
+        <ellipse cx="0" cy="-15" rx="9" ry="16"/>
+        <ellipse cx="-12" cy="5" rx="7" ry="13"/>
+        <ellipse cx="12" cy="5" rx="7" ry="13"/>
+        <ellipse cx="-14" cy="28" rx="7" ry="13"/>
+        <ellipse cx="14" cy="28" rx="7" ry="13"/>
+      </g>
+      <g transform="translate(240 200)">
+        <rect x="-2" y="0" width="4" height="120" fill="#3b7730"/>
+        <ellipse cx="0" cy="-10" rx="8" ry="14"/>
+        <ellipse cx="-10" cy="10" rx="6" ry="11"/>
+        <ellipse cx="10" cy="10" rx="6" ry="11"/>
+        <ellipse cx="-12" cy="30" rx="6" ry="11"/>
+        <ellipse cx="12" cy="30" rx="6" ry="11"/>
+      </g>
+      <g transform="translate(320 190)">
+        <rect x="-2" y="0" width="4" height="130" fill="#3b7730"/>
+        <ellipse cx="0" cy="-12" rx="8" ry="15"/>
+        <ellipse cx="-11" cy="8" rx="7" ry="12"/>
+        <ellipse cx="11" cy="8" rx="7" ry="12"/>
+      </g>
+    </g>
+  </g>
+</svg>

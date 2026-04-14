@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDE68A"/><stop offset="1" stop-color="#70b05d"/></linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#abg)"/>
+  <!-- sun -->
+  <circle cx="480" cy="120" r="50" fill="#FEF3C7" opacity=".9"/>
+  <!-- hills -->
+  <path d="M0 340 Q200 260 400 320 T600 300 L600 480 L0 480Z" fill="#4e9340" opacity=".85"/>
+  <!-- field rows -->
+  <g stroke="#305e28" stroke-width="3" opacity=".3">
+    <path d="M-50 400 Q300 370 650 400" fill="none"/>
+    <path d="M-50 440 Q300 410 650 440" fill="none"/>
+  </g>
+  <!-- farmer with tablet (center) -->
+  <g transform="translate(300 290)">
+    <ellipse cy="110" rx="80" ry="12" fill="#000" opacity=".2"/>
+    <path d="M-50 30 Q-55 110 -35 110 L35 110 Q55 110 50 30 Z" fill="#233f1f"/>
+    <circle cy="-25" r="32" fill="#FBBF24"/>
+    <ellipse cy="-45" rx="55" ry="10" fill="#92400E"/>
+    <path d="M-32 -45 Q-32 -68 0 -70 Q32 -68 32 -45 Z" fill="#78350F"/>
+    <!-- tablet -->
+    <rect x="-42" y="25" width="84" height="55" rx="5" fill="#1F2937"/>
+    <rect x="-37" y="30" width="74" height="45" rx="2" fill="#3b7730"/>
+    <rect x="-33" y="36" width="24" height="4" fill="#c6e3bd"/>
+    <rect x="-33" y="44" width="40" height="4" fill="#c6e3bd" opacity=".7"/>
+    <rect x="-33" y="52" width="34" height="4" fill="#c6e3bd" opacity=".5"/>
+    <!-- chart bars -->
+    <g transform="translate(15 48)" fill="#FBBF24">
+      <rect x="0" y="10" width="4" height="14"/>
+      <rect x="6" y="4" width="4" height="20"/>
+      <rect x="12" y="8" width="4" height="16"/>
+      <rect x="18" y="0" width="4" height="24"/>
+    </g>
+    <!-- arms -->
+    <path d="M-50 30 Q-75 60 -50 80" stroke="#233f1f" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <path d="M50 30 Q75 60 50 80" stroke="#233f1f" stroke-width="18" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

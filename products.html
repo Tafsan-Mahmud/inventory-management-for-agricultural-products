@@ -48,98 +48,163 @@
     </div>
   </header>
 
-  <section class="pt-36 pb-12 bg-white">
-    <div class="container mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+  <!-- Hero -->
+  <section class="pt-32 pb-12 lg:pt-40 bg-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl -z-0"></div>
+    <div class="container mx-auto px-5 lg:px-8 text-center relative">
       <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Our Products</span>
-      <h1 class="font-serif text-5xl md:text-6xl mt-2">Fresh from our <span class="text-agro-600">fields</span></h1>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl mt-2 leading-tight">Fresh from our <span class="text-agro-600">fields.</span></h1>
       <p class="max-w-2xl mx-auto mt-5 text-agro-800/70">Explore the categories Modern Agro helps thousands of farms manage every single day.</p>
     </div>
   </section>
 
-  <section class="py-16">
-    <div class="container mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
-        <div class="h-56 overflow-hidden"><img src="assets/product-grains.jpg" alt="Grains" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Grains & Cereals</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Rice, wheat, corn, barley and more staple crops tracked by batch.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">120+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
+  <!-- Filter chips -->
+  <section class="pt-8">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="flex flex-wrap gap-2 justify-center">
+        <button class="filter-chip active px-4 py-2 rounded-full text-sm font-semibold bg-agro-600 text-white">All</button>
+        <button class="filter-chip px-4 py-2 rounded-full text-sm font-semibold bg-white border border-agro-100 hover:bg-agro-50">Grains</button>
+        <button class="filter-chip px-4 py-2 rounded-full text-sm font-semibold bg-white border border-agro-100 hover:bg-agro-50">Vegetables</button>
+        <button class="filter-chip px-4 py-2 rounded-full text-sm font-semibold bg-white border border-agro-100 hover:bg-agro-50">Fruits</button>
+        <button class="filter-chip px-4 py-2 rounded-full text-sm font-semibold bg-white border border-agro-100 hover:bg-agro-50">Dairy</button>
+        <button class="filter-chip px-4 py-2 rounded-full text-sm font-semibold bg-white border border-agro-100 hover:bg-agro-50">Seeds</button>
       </div>
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
-        <div class="h-56 overflow-hidden"><img src="assets/product-vegetables.jpg" alt="Vegetables" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Vegetables</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Leafy greens, roots, and gourds — managed for freshness and rotation.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">85+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
-        <div class="h-56 overflow-hidden"><img src="assets/product-fruits.jpg" alt="Fruits" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Fruits</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Seasonal harvests organized by shelf-life, grade, and destination.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">60+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
-        <div class="h-56 overflow-hidden"><img src="assets/product-dairy.jpg" alt="Dairy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Dairy</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Milk, cheese, and yogurt inventory with expiry alerts built-in.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">30+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
-        <div class="h-56 overflow-hidden"><img src="assets/product-seeds.jpg" alt="Seeds" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Seeds & Seedlings</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Track germination rates, planting dates, and inventory on hand.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">200+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
-        <div class="h-56 overflow-hidden"><img src="assets/product-livestock.jpg" alt="Livestock Feed" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
-        <div class="p-6">
-          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Category</span>
-          <h3 class="font-serif text-2xl mt-3">Livestock Feed</h3>
-          <p class="text-sm text-agro-800/70 mt-2">Hay, silage, and concentrates — never run low on feed again.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-sm font-semibold text-agro-700">45+ varieties</span>
-            <i class="fa-solid fa-arrow-right text-agro-600 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <!-- Grid -->
+  <section class="py-12">
+    <div class="container mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="50">
+        <div class="h-56 overflow-hidden"><img src="assets/product-grains.svg" alt="Grains" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-amber-100 text-amber-700 font-semibold px-3 py-1 rounded-full">Grains</span>
+          <h3 class="font-serif text-2xl mt-3">Grains & Cereals</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Rice, wheat, corn, barley and more staple crops tracked by batch and origin.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">120+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-56 overflow-hidden"><img src="assets/product-vegetables.svg" alt="Vegetables" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-green-100 text-green-700 font-semibold px-3 py-1 rounded-full">Vegetables</span>
+          <h3 class="font-serif text-2xl mt-3">Vegetables</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Leafy greens, roots, and gourds — managed for freshness and rotation cycles.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">85+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="150">
+        <div class="h-56 overflow-hidden"><img src="assets/product-fruits.svg" alt="Fruits" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-red-100 text-red-700 font-semibold px-3 py-1 rounded-full">Fruits</span>
+          <h3 class="font-serif text-2xl mt-3">Fruits</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Seasonal harvests organized by shelf-life, grade, and destination market.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">60+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="50">
+        <div class="h-56 overflow-hidden"><img src="assets/product-dairy.svg" alt="Dairy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full">Dairy</span>
+          <h3 class="font-serif text-2xl mt-3">Dairy</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Milk, cheese, and yogurt inventory with built-in expiry alerts and traceability.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">30+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-56 overflow-hidden"><img src="assets/product-seeds.svg" alt="Seeds" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-agro-100 text-agro-700 font-semibold px-3 py-1 rounded-full">Seeds</span>
+          <h3 class="font-serif text-2xl mt-3">Seeds & Seedlings</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Track germination rates, planting dates, and current inventory at a glance.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">200+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-3xl overflow-hidden border border-agro-100 hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-delay="150">
+        <div class="h-56 overflow-hidden"><img src="assets/product-livestock.svg" alt="Livestock Feed" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"/></div>
+        <div class="p-6">
+          <span class="text-xs bg-orange-100 text-orange-700 font-semibold px-3 py-1 rounded-full">Livestock Feed</span>
+          <h3 class="font-serif text-2xl mt-3">Livestock Feed</h3>
+          <p class="text-sm text-agro-800/70 mt-2">Hay, silage, and concentrates — never run low on feed for your animals again.</p>
+          <div class="flex items-center justify-between mt-5 pt-4 border-t border-agro-50">
+            <span class="text-sm font-semibold text-agro-700">45+ varieties</span>
+            <a href="dashboard.html" class="text-agro-600 group-hover:translate-x-1 transition"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
+        <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">Featured This Season</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl mt-2">Top picks from the harvest.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-cream p-5 rounded-2xl border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up">
+          <div class="aspect-square rounded-xl overflow-hidden"><img src="assets/showcase-1.svg" class="w-full h-full object-cover"/></div>
+          <h4 class="font-bold mt-4">Heirloom Tomatoes</h4>
+          <p class="text-xs text-agro-800/60 mt-1">In stock · 320 kg</p>
+          <div class="flex items-center justify-between mt-3"><span class="font-bold text-agro-700">$1.50/kg</span><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Fresh</span></div>
+        </div>
+        <div class="bg-cream p-5 rounded-2xl border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="50">
+          <div class="aspect-square rounded-xl overflow-hidden"><img src="assets/showcase-2.svg" class="w-full h-full object-cover"/></div>
+          <h4 class="font-bold mt-4">Premium Wheat</h4>
+          <p class="text-xs text-agro-800/60 mt-1">In stock · 890 kg</p>
+          <div class="flex items-center justify-between mt-3"><span class="font-bold text-agro-700">$1.20/kg</span><span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full font-semibold">Popular</span></div>
+        </div>
+        <div class="bg-cream p-5 rounded-2xl border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="aspect-square rounded-xl overflow-hidden"><img src="assets/showcase-3.svg" class="w-full h-full object-cover"/></div>
+          <h4 class="font-bold mt-4">Alphonso Mango</h4>
+          <p class="text-xs text-agro-800/60 mt-1">In stock · 180 kg</p>
+          <div class="flex items-center justify-between mt-3"><span class="font-bold text-agro-700">$4.20/kg</span><span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">Hot</span></div>
+        </div>
+        <div class="bg-cream p-5 rounded-2xl border border-agro-100 hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="150">
+          <div class="aspect-square rounded-xl overflow-hidden"><img src="assets/showcase-4.svg" class="w-full h-full object-cover"/></div>
+          <h4 class="font-bold mt-4">Sunflower Seeds</h4>
+          <p class="text-xs text-agro-800/60 mt-1">In stock · 400 kg</p>
+          <div class="flex items-center justify-between mt-3"><span class="font-bold text-agro-700">$5.50/kg</span><span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">New</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="bg-gradient-to-br from-agro-700 to-agro-900 rounded-3xl p-8 md:p-12 text-white text-center relative overflow-hidden">
+        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-amber-500/20 rounded-full blur-2xl"></div>
+        <h2 class="font-serif text-3xl md:text-4xl">Manage your inventory the smart way.</h2>
+        <p class="mt-3 text-white/80 max-w-xl mx-auto">All these products and more — tracked beautifully in our dashboard.</p>
+        <a href="dashboard.html" class="inline-flex items-center gap-2 mt-6 bg-white text-agro-800 px-6 py-3 rounded-full font-bold hover:-translate-y-0.5 transition shadow-xl">Open Dashboard <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-agro-900 text-white/80 pt-16 pb-8 mt-10">
     <div class="container mx-auto px-5 lg:px-8 grid md:grid-cols-4 gap-10">
       <div class="md:col-span-2">
@@ -171,5 +236,18 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Filter chips visual toggle
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          c.classList.remove('active','bg-agro-600','text-white');
+          c.classList.add('bg-white','border','border-agro-100');
+        });
+        chip.classList.add('active','bg-agro-600','text-white');
+        chip.classList.remove('bg-white','border','border-agro-100');
+      });
+    });
+  </script>
 </body>
 </html>

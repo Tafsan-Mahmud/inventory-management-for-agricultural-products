@@ -5,50 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modern Agro — Smart Inventory for Agricultural Products</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <!-- AOS animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
 
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"DM Serif Display"', 'serif']
-          },
-          colors: {
-            agro: {
-              50:  '#f3f9f1',
-              100: '#e3f1df',
-              200: '#c6e3bd',
-              300: '#9dcd8f',
-              400: '#70b05d',
-              500: '#4e9340',
-              600: '#3b7730',
-              700: '#305e28',
-              800: '#294b23',
-              900: '#233f1f'
-            },
-            cream: '#FBF8EF',
-            earth: '#8B5E34',
-            amber2: '#D97706'
-          }
+      theme: { extend: {
+        fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], serif: ['"DM Serif Display"', 'serif'] },
+        colors: {
+          agro: { 50:'#f3f9f1',100:'#e3f1df',200:'#c6e3bd',300:'#9dcd8f',400:'#70b05d',500:'#4e9340',600:'#3b7730',700:'#305e28',800:'#294b23',900:'#233f1f' },
+          cream: '#FBF8EF', earth: '#8B5E34', amber2: '#D97706'
         }
-      }
+      }}
     }
   </script>
 </head>
 <body class="font-sans bg-cream text-agro-900 antialiased">
 
-  <!-- ============ NAVBAR ============ -->
+  <!-- NAVBAR -->
   <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-5 lg:px-8">
       <nav class="flex items-center justify-between py-4">
@@ -76,7 +53,6 @@
         </div>
       </nav>
 
-      <!-- mobile menu -->
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
         <ul class="flex flex-col gap-1 bg-white rounded-2xl p-3 shadow-lg border border-agro-100">
           <li><a href="index.html" class="block px-4 py-2.5 rounded-lg hover:bg-agro-50 font-medium">Home</a></li>
@@ -89,15 +65,15 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-    <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
       <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-agro-200/40 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-200/30 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div data-aos="fade-right" data-aos-duration="900">
+      <div data-aos="fade-up" data-aos-duration="700">
         <span class="inline-flex items-center gap-2 bg-white border border-agro-200 text-agro-700 text-xs font-semibold px-4 py-1.5 rounded-full shadow-sm">
           <span class="w-2 h-2 rounded-full bg-agro-500 animate-pulse"></span> #1 Smart Farm Inventory
         </span>
@@ -117,55 +93,33 @@
           </a>
         </div>
 
-        <!-- stats -->
         <div class="mt-12 grid grid-cols-3 gap-6 max-w-md">
-          <div>
-            <div class="text-3xl font-bold text-agro-700">12k+</div>
-            <div class="text-xs text-agro-800/60 mt-1">Active Farms</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-agro-700">98%</div>
-            <div class="text-xs text-agro-800/60 mt-1">Accuracy</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-agro-700">24/7</div>
-            <div class="text-xs text-agro-800/60 mt-1">Support</div>
-          </div>
+          <div><div class="text-3xl font-bold text-agro-700">12k+</div><div class="text-xs text-agro-800/60 mt-1">Active Farms</div></div>
+          <div><div class="text-3xl font-bold text-agro-700">98%</div><div class="text-xs text-agro-800/60 mt-1">Accuracy</div></div>
+          <div><div class="text-3xl font-bold text-agro-700">24/7</div><div class="text-xs text-agro-800/60 mt-1">Support</div></div>
         </div>
       </div>
 
-      <div data-aos="fade-left" data-aos-duration="900" class="relative">
+      <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" class="relative">
         <div class="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-agro-900/20 floaty">
-          <img src="assets/hero-farm.jpg" alt="Lush green agricultural farm" class="w-full h-[520px] object-cover" />
+          <img src="assets/hero-farm.png" alt="Lush green agricultural farm" class="w-full h-[520px] object-cover" />
           <div class="absolute inset-0 bg-gradient-to-tr from-agro-900/30 to-transparent"></div>
         </div>
 
-        <!-- floating card 1 -->
         <div class="absolute -left-4 md:-left-10 top-10 bg-white rounded-2xl p-4 shadow-xl border border-agro-100 floaty-slow flex items-center gap-3 w-56">
-          <div class="w-11 h-11 rounded-xl bg-agro-100 grid place-items-center">
-            <i class="fa-solid fa-wheat-awn text-agro-700"></i>
-          </div>
-          <div>
-            <div class="text-xs text-agro-800/60">Wheat Stock</div>
-            <div class="font-bold text-agro-900">2,450 kg</div>
-          </div>
+          <div class="w-11 h-11 rounded-xl bg-agro-100 grid place-items-center"><i class="fa-solid fa-wheat-awn text-agro-700"></i></div>
+          <div><div class="text-xs text-agro-800/60">Wheat Stock</div><div class="font-bold text-agro-900">2,450 kg</div></div>
         </div>
 
-        <!-- floating card 2 -->
         <div class="absolute -right-4 md:-right-8 bottom-10 bg-white rounded-2xl p-4 shadow-xl border border-agro-100 floaty flex items-center gap-3 w-60">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 grid place-items-center">
-            <i class="fa-solid fa-arrow-trend-up text-amber-600"></i>
-          </div>
-          <div>
-            <div class="text-xs text-agro-800/60">Harvest Growth</div>
-            <div class="font-bold text-agro-900">+24.5% <span class="text-xs text-agro-500">this month</span></div>
-          </div>
+          <div class="w-11 h-11 rounded-xl bg-amber-100 grid place-items-center"><i class="fa-solid fa-arrow-trend-up text-amber-600"></i></div>
+          <div><div class="text-xs text-agro-800/60">Harvest Growth</div><div class="font-bold text-agro-900">+24.5% <span class="text-xs text-agro-500">this month</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEATURES ============ -->
+  <!-- FEATURES -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-5 lg:px-8">
       <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
@@ -175,26 +129,20 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 mt-14">
-        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-14 h-14 rounded-2xl bg-agro-600 grid place-items-center text-white text-2xl shadow-lg shadow-agro-600/30 group-hover:rotate-6 transition">
-            <i class="fa-solid fa-boxes-stacked"></i>
-          </div>
+        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="50">
+          <div class="w-14 h-14 rounded-2xl bg-agro-600 grid place-items-center text-white text-2xl shadow-lg shadow-agro-600/30"><i class="fa-solid fa-boxes-stacked"></i></div>
           <h3 class="mt-6 text-xl font-bold">Smart Inventory</h3>
           <p class="mt-2 text-agro-800/70 text-sm leading-relaxed">Track every seed, crate, and bushel. Get low-stock alerts before you run out.</p>
         </div>
 
-        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-14 h-14 rounded-2xl bg-amber2 grid place-items-center text-white text-2xl shadow-lg shadow-amber-600/30 group-hover:rotate-6 transition">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
+        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 rounded-2xl bg-amber2 grid place-items-center text-white text-2xl shadow-lg shadow-amber-600/30"><i class="fa-solid fa-chart-line"></i></div>
           <h3 class="mt-6 text-xl font-bold">Real-time Analytics</h3>
           <p class="mt-2 text-agro-800/70 text-sm leading-relaxed">Visualize yield, sales, and trends with clean charts designed for decision-making.</p>
         </div>
 
-        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-14 h-14 rounded-2xl bg-earth grid place-items-center text-white text-2xl shadow-lg shadow-orange-900/20 group-hover:rotate-6 transition">
-            <i class="fa-solid fa-tractor"></i>
-          </div>
+        <div class="group p-8 rounded-3xl bg-cream border border-agro-100 hover:border-agro-400 hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-14 h-14 rounded-2xl bg-earth grid place-items-center text-white text-2xl shadow-lg shadow-orange-900/20"><i class="fa-solid fa-tractor"></i></div>
           <h3 class="mt-6 text-xl font-bold">Farm-first Design</h3>
           <p class="mt-2 text-agro-800/70 text-sm leading-relaxed">Designed by agri-experts. Works on mobile in the field — and desktop in the office.</p>
         </div>
@@ -202,18 +150,18 @@
     </div>
   </section>
 
-  <!-- ============ SHOWCASE ============ -->
+  <!-- SHOWCASE -->
   <section class="py-20">
     <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-      <div data-aos="fade-right" class="relative">
+      <div data-aos="fade-up" class="relative">
         <div class="grid grid-cols-2 gap-4">
-          <img src="assets/showcase-1.jpg" alt="Fresh vegetables" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg"/>
-          <img src="assets/showcase-2.jpg" alt="Green wheat field" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg mt-8"/>
-          <img src="assets/showcase-3.jpg" alt="Fruit harvest" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg -mt-4"/>
-          <img src="assets/showcase-4.jpg" alt="Farmer with tablet" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg mt-4"/>
+          <img src="assets/showcase-1.svg" alt="Fresh vegetables" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg"/>
+          <img src="assets/showcase-2.svg" alt="Green wheat field" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg mt-8"/>
+          <img src="assets/showcase-3.svg" alt="Fruit harvest" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg -mt-4"/>
+          <img src="assets/showcase-4.svg" alt="Farmer with tablet" class="rounded-2xl h-48 md:h-64 w-full object-cover shadow-lg mt-4"/>
         </div>
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-up" data-aos-delay="100">
         <span class="text-agro-600 font-semibold text-sm uppercase tracking-wider">From Soil to System</span>
         <h2 class="font-serif text-4xl md:text-5xl mt-2 leading-tight">One platform for every agricultural product.</h2>
         <p class="mt-5 text-agro-800/70 leading-relaxed">Whether you're managing grains, vegetables, fruits, dairy, or livestock feed — Modern Agro keeps your records organized, searchable, and beautifully visualized.</p>
@@ -230,31 +178,72 @@
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
+  <!-- CTA — refined -->
   <section class="py-20">
     <div class="container mx-auto px-5 lg:px-8">
-      <div class="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-agro-700 to-agro-900 p-10 md:p-16 text-white" data-aos="zoom-in">
-        <div class="absolute -right-20 -top-20 w-80 h-80 bg-agro-400/20 rounded-full blur-3xl"></div>
-        <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl"></div>
-        <div class="relative z-10 max-w-2xl">
-          <h2 class="font-serif text-4xl md:text-5xl leading-tight">Ready to modernize your farm?</h2>
-          <p class="mt-4 text-white/80">Step into the dashboard and see how effortless inventory management can be.</p>
-          <a href="dashboard.html" class="mt-8 inline-flex items-center gap-2 bg-white text-agro-800 px-7 py-3.5 rounded-full font-bold hover:-translate-y-0.5 transition shadow-xl">
-            Launch Dashboard <i class="fa-solid fa-rocket"></i>
-          </a>
+      <div class="cta-shimmer relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-agro-700 via-agro-800 to-agro-900 text-white" data-aos="fade-up">
+        <!-- decorative orbs -->
+        <div class="cta-orb-1 absolute -right-20 -top-20 w-80 h-80 bg-agro-400/20 rounded-full blur-3xl"></div>
+        <div class="cta-orb-2 absolute -left-20 -bottom-20 w-80 h-80 bg-amber-500/15 rounded-full blur-3xl"></div>
+
+        <!-- subtle dot grid -->
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+        <div class="relative z-10 grid lg:grid-cols-5 gap-10 items-center p-10 md:p-14 lg:p-16">
+          <div class="lg:col-span-3">
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+              <i class="fa-solid fa-sparkles text-amber-300"></i> Get Started Today
+            </span>
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mt-5">Ready to modernize your farm?</h2>
+            <p class="mt-5 text-white/75 text-lg max-w-lg leading-relaxed">Step into the dashboard and see how effortless inventory management can be — no setup, no signup.</p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="dashboard.html" class="group inline-flex items-center gap-3 bg-white text-agro-800 px-7 py-3.5 rounded-full font-bold hover:-translate-y-0.5 transition shadow-xl">
+                Launch Dashboard
+                <span class="w-7 h-7 rounded-full bg-agro-600 text-white grid place-items-center group-hover:translate-x-1 transition">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </span>
+              </a>
+              <a href="contact.html" class="inline-flex items-center gap-2 text-white/90 hover:text-white px-5 py-3.5 rounded-full font-semibold border border-white/20 hover:bg-white/10 transition">
+                Contact Sales
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 hidden lg:block relative">
+            <div class="relative w-full aspect-square max-w-sm mx-auto">
+              <!-- rotating ring -->
+              <div class="absolute inset-0 spin-slow rounded-full border-2 border-dashed border-white/20"></div>
+              <!-- inner glow circle -->
+              <div class="absolute inset-8 rounded-full bg-gradient-to-br from-agro-500/30 to-transparent backdrop-blur-sm border border-white/10 grid place-items-center">
+                <div class="text-center">
+                  <div class="text-6xl font-bold">12k+</div>
+                  <div class="text-sm text-white/70 mt-1">Happy Farmers</div>
+                </div>
+              </div>
+              <!-- floating badges -->
+              <div class="absolute top-2 right-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3 floaty">
+                <i class="fa-solid fa-leaf text-agro-300 text-xl"></i>
+              </div>
+              <div class="absolute bottom-4 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3 floaty-slow">
+                <i class="fa-solid fa-chart-line text-amber-300 text-xl"></i>
+              </div>
+              <div class="absolute top-1/2 -right-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3 floaty">
+                <i class="fa-solid fa-seedling text-agro-200 text-xl"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer class="bg-agro-900 text-white/80 pt-16 pb-8 mt-10">
     <div class="container mx-auto px-5 lg:px-8 grid md:grid-cols-4 gap-10">
       <div class="md:col-span-2">
         <div class="flex items-center gap-2">
-          <div class="w-10 h-10 rounded-xl bg-agro-500 grid place-items-center">
-            <i class="fa-solid fa-seedling text-white"></i>
-          </div>
+          <div class="w-10 h-10 rounded-xl bg-agro-500 grid place-items-center"><i class="fa-solid fa-seedling text-white"></i></div>
           <span class="text-xl font-bold text-white">Modern<span class="text-agro-300">Agro</span></span>
         </div>
         <p class="mt-4 max-w-sm text-sm leading-relaxed">Smart inventory management crafted for the modern farmer. From seed to shelf — we've got you covered.</p>
@@ -288,7 +277,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>

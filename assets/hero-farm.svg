@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1040" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset=".45" stop-color="#FBBF24" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FBF8EF"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#70b05d"/><stop offset="1" stop-color="#4e9340"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4e9340"/><stop offset="1" stop-color="#305e28"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9dcd8f"/><stop offset="1" stop-color="#3b7730"/>
+    </linearGradient>
+    <radialGradient id="sunG" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FEF3C7"/>
+      <stop offset=".6" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- sky -->
+  <rect width="800" height="1040" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="580" cy="260" r="170" fill="url(#sunG)"/>
+  <circle cx="580" cy="260" r="70" fill="#FEF3C7"/>
+  <!-- clouds -->
+  <g fill="#FFFFFF" opacity=".75">
+    <ellipse cx="150" cy="170" rx="55" ry="14"/>
+    <ellipse cx="200" cy="155" rx="38" ry="11"/>
+    <ellipse cx="680" cy="420" rx="45" ry="12"/>
+  </g>
+  <!-- far hills -->
+  <path d="M0 560 Q200 450 400 530 T800 510 L800 700 L0 700 Z" fill="url(#hill2)" opacity=".55"/>
+  <path d="M0 620 Q150 540 320 590 Q500 640 680 580 T800 600 L800 760 L0 760 Z" fill="url(#hill1)" opacity=".8"/>
+  <!-- farmhouse -->
+  <g transform="translate(580 540)">
+    <rect x="0" y="30" width="80" height="60" fill="#8B5E34"/>
+    <polygon points="-10,30 40,-5 90,30" fill="#5B3D1F"/>
+    <rect x="30" y="55" width="20" height="35" fill="#3b7730"/>
+    <rect x="10" y="45" width="15" height="15" fill="#FDE68A"/>
+    <rect x="55" y="45" width="15" height="15" fill="#FDE68A"/>
+  </g>
+  <!-- field -->
+  <path d="M0 720 L800 690 L800 1040 L0 1040 Z" fill="url(#field)"/>
+  <!-- crop rows -->
+  <g stroke="#305e28" stroke-width="2" opacity=".35">
+    <path d="M-50 780 Q400 750 850 770" fill="none"/>
+    <path d="M-50 830 Q400 800 850 820" fill="none"/>
+    <path d="M-50 880 Q400 850 850 870" fill="none"/>
+    <path d="M-50 940 Q400 910 850 930" fill="none"/>
+    <path d="M-50 1000 Q400 970 850 990" fill="none"/>
+  </g>
+  <!-- wheat stalks -->
+  <g opacity=".9">
+    <g transform="translate(80 860)" fill="#F59E0B">
+      <rect x="-1" y="-60" width="2" height="60" fill="#3b7730"/>
+      <ellipse cx="0" cy="-50" rx="4" ry="8"/>
+      <ellipse cx="-6" cy="-40" rx="3" ry="6"/>
+      <ellipse cx="6" cy="-40" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(130 880)" fill="#F59E0B">
+      <rect x="-1" y="-55" width="2" height="55" fill="#3b7730"/>
+      <ellipse cx="0" cy="-45" rx="4" ry="7"/>
+      <ellipse cx="-5" cy="-36" rx="3" ry="5"/>
+      <ellipse cx="5" cy="-36" rx="3" ry="5"/>
+    </g>
+    <g transform="translate(720 900)" fill="#F59E0B">
+      <rect x="-1" y="-55" width="2" height="55" fill="#3b7730"/>
+      <ellipse cx="0" cy="-45" rx="4" ry="7"/>
+      <ellipse cx="-5" cy="-36" rx="3" ry="5"/>
+      <ellipse cx="5" cy="-36" rx="3" ry="5"/>
+    </g>
+  </g>
+  <!-- tree -->
+  <g transform="translate(150 590)">
+    <rect x="-4" y="0" width="8" height="40" fill="#5B3D1F"/>
+    <circle cx="0" cy="-5" r="30" fill="#3b7730"/>
+    <circle cx="-15" cy="5" r="22" fill="#4e9340"/>
+    <circle cx="15" cy="5" r="22" fill="#305e28"/>
+  </g>
+</svg>

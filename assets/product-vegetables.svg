@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4e9340"/><stop offset="1" stop-color="#305e28"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#ffffff" opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="600" height="400" fill="url(#dots)"/>
+  
+  <g transform="translate(300 210)">
+    <path d="M-40 -90 Q-20 -100 -10 -70 Q 0 -110 10 -70 Q 20 -100 40 -90 Q 10 -60 0 -50 Q -10 -60 -40 -90Z" fill="#70b05d"/>
+    <path d="M-30 -50 L-10 80 L10 80 L30 -50 Z" fill="#F97316"/>
+    <path d="M-25 -40 L25 -40" stroke="#FDBA74" stroke-width="1.5"/>
+    <path d="M-22 -20 L22 -20" stroke="#FDBA74" stroke-width="1.5"/>
+    <path d="M-18 0 L18 0" stroke="#FDBA74" stroke-width="1.5"/>
+    <path d="M-14 20 L14 20" stroke="#FDBA74" stroke-width="1.5"/>
+    <circle cx="-70" cy="50" r="25" fill="#DC2626"/>
+    <circle cx="-78" cy="40" r="4" fill="#FCA5A5" opacity=".6"/>
+    <path d="M-78 28 Q-70 20 -62 28" fill="none" stroke="#166534" stroke-width="2"/>
+    <g transform="translate(75 50)">
+      <ellipse cx="0" cy="0" rx="28" ry="22" fill="#FDE68A"/>
+      <path d="M-5 -22 L5 -22 L3 -30 L-3 -30 Z" fill="#166534"/>
+    </g>
+  </g>
+</svg>
